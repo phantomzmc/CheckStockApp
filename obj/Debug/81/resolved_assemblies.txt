@@ -2,6 +2,7 @@ C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.Core.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.Json.dll
@@ -25,8 +26,17 @@ C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Xamarin.Android.Support.Media.Compat.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Xamarin.Android.Support.Transition.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Xamarin.Android.Support.v7.CardView.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\netstandard.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.Data.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.Numerics.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.Transactions.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.IO.Compression.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.IO.Compression.FileSystem.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.Xml.Linq.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\Mono.Security.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\android\assets\System.IdentityModel.dll

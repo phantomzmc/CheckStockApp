@@ -352,6 +352,24 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F04004B
 			public const int buttonTintMode = 2130968651;
 			
+			// aapt resource value: 0x7F040001
+			public const int cardBackgroundColor = 2130968577;
+			
+			// aapt resource value: 0x7F040002
+			public const int cardCornerRadius = 2130968578;
+			
+			// aapt resource value: 0x7F040003
+			public const int cardElevation = 2130968579;
+			
+			// aapt resource value: 0x7F040004
+			public const int cardMaxElevation = 2130968580;
+			
+			// aapt resource value: 0x7F040005
+			public const int cardPreventCornerOverlap = 2130968581;
+			
+			// aapt resource value: 0x7F040006
+			public const int cardUseCompatPadding = 2130968582;
+			
 			// aapt resource value: 0x7F04004C
 			public const int checkboxStyle = 2130968652;
 			
@@ -432,6 +450,21 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F040066
 			public const int contentInsetStartWithNavigation = 2130968678;
+			
+			// aapt resource value: 0x7F040007
+			public const int contentPadding = 2130968583;
+			
+			// aapt resource value: 0x7F040008
+			public const int contentPaddingBottom = 2130968584;
+			
+			// aapt resource value: 0x7F040009
+			public const int contentPaddingLeft = 2130968585;
+			
+			// aapt resource value: 0x7F04000A
+			public const int contentPaddingRight = 2130968586;
+			
+			// aapt resource value: 0x7F04000B
+			public const int contentPaddingTop = 2130968587;
 			
 			// aapt resource value: 0x7F040067
 			public const int contentScrim = 2130968679;
@@ -1320,6 +1353,18 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F060026
 			public const int button_material_light = 2131099686;
 			
+			// aapt resource value: 0x7F060001
+			public const int cardview_dark_background = 2131099649;
+			
+			// aapt resource value: 0x7F060002
+			public const int cardview_light_background = 2131099650;
+			
+			// aapt resource value: 0x7F060003
+			public const int cardview_shadow_end_color = 2131099651;
+			
+			// aapt resource value: 0x7F060004
+			public const int cardview_shadow_start_color = 2131099652;
+			
 			// aapt resource value: 0x7F040004
 			public const int colorAccent = 2130968580;
 			
@@ -1740,6 +1785,15 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F08004A
 			public const int abc_text_size_title_material_toolbar = 2131230794;
+			
+			// aapt resource value: 0x7F080001
+			public const int cardview_compat_inset_shadow = 2131230721;
+			
+			// aapt resource value: 0x7F080002
+			public const int cardview_default_elevation = 2131230722;
+			
+			// aapt resource value: 0x7F080003
+			public const int cardview_default_radius = 2131230723;
 			
 			// aapt resource value: 0x7F080001
 			public const int compat_button_inset_horizontal_material = 2131230721;
@@ -2394,6 +2448,9 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F0C0016
 			public const int alertTitle = 2131492886;
 			
+			// aapt resource value: 0x7F010028
+			public const int amound_total_textView = 2130772008;
+			
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
 			
@@ -2412,6 +2469,9 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F0C001C
 			public const int cancel_action = 2131492892;
 			
+			// aapt resource value: 0x7F010010
+			public const int cellitem_layout = 2130771984;
+			
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
 			
@@ -2429,6 +2489,9 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0C0022
 			public const int coordinator = 2131492898;
+			
+			// aapt resource value: 0x7F010018
+			public const int costunit_textView = 2130771992;
 			
 			// aapt resource value: 0x7F0C0023
 			public const int custom = 2131492899;
@@ -2481,8 +2544,35 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
 			
+			// aapt resource value: 0x7F010027
+			public const int f_amound_total_textView = 2130772007;
+			
+			// aapt resource value: 0x7F010017
+			public const int f_costunit_textView = 2130771991;
+			
+			// aapt resource value: 0x7F010013
+			public const int f_groupItem_textView = 2130771987;
+			
+			// aapt resource value: 0x7F010019
+			public const int f_idItem_textView = 2130771993;
+			
+			// aapt resource value: 0x7F010025
+			public const int f_last_month_textView = 2130772005;
+			
+			// aapt resource value: 0x7F010021
+			public const int f_nameItem_textView = 2130772001;
+			
+			// aapt resource value: 0x7F010015
+			public const int f_totalstock_textView = 2130771989;
+			
+			// aapt resource value: 0x7F010023
+			public const int f_total_textView = 2130772003;
+			
 			// aapt resource value: 0x7F0C0034
 			public const int ghost_view = 2131492916;
+			
+			// aapt resource value: 0x7F010014
+			public const int groupItem_textView = 2130771988;
 			
 			// aapt resource value: 0x7F0C0035
 			public const int home = 2131492917;
@@ -2492,6 +2582,12 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0C000B
 			public const int icon_group = 2131492875;
+			
+			// aapt resource value: 0x7F010011
+			public const int idItemTextView = 2130771985;
+			
+			// aapt resource value: 0x7F010020
+			public const int idItem_textView = 2130772000;
 			
 			// aapt resource value: 0x7F0C0038
 			public const int image = 2131492920;
@@ -2507,6 +2603,9 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0C003C
 			public const int largeLabel = 2131492924;
+			
+			// aapt resource value: 0x7F010026
+			public const int last_month_textView = 2130772006;
 			
 			// aapt resource value: 0x7F0C003D
 			public const int left = 2131492925;
@@ -2543,6 +2642,12 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
+			
+			// aapt resource value: 0x7F010022
+			public const int nameItem_textView = 2130772002;
+			
+			// aapt resource value: 0x7F010012
+			public const int name_textView = 2130771986;
 			
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
@@ -2676,6 +2781,9 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F0C006D
 			public const int snackbar_text = 2131492973;
 			
+			// aapt resource value: 0x7F010030
+			public const int spacepart_listView = 2130772016;
+			
 			// aapt resource value: 0x7F0C006E
 			public const int spacer = 2131492974;
 			
@@ -2702,6 +2810,9 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0C0076
 			public const int submit_area = 2131492982;
+			
+			// aapt resource value: 0x7F010029
+			public const int submit_button = 2130772009;
 			
 			// aapt resource value: 0x7F0C0077
 			public const int tabMode = 2131492983;
@@ -2750,6 +2861,12 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0C0085
 			public const int topPanel = 2131492997;
+			
+			// aapt resource value: 0x7F010016
+			public const int totalstock_textView = 2130771990;
+			
+			// aapt resource value: 0x7F010024
+			public const int total_textView = 2130772004;
 			
 			// aapt resource value: 0x7F0C0086
 			public const int touch_outside = 2131492998;
@@ -2924,6 +3041,9 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F020003
 			public const int cell_spacepart_item = 2130837507;
 			
+			// aapt resource value: 0x7F020004
+			public const int custom_modal_item = 2130837508;
+			
 			// aapt resource value: 0x7F0F001B
 			public const int design_bottom_navigation_item = 2131689499;
 			
@@ -3019,6 +3139,9 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F0F003A
 			public const int select_dialog_singlechoice_material = 2131689530;
+			
+			// aapt resource value: 0x7F020005
+			public const int spacepart_listview = 2130837509;
 			
 			// aapt resource value: 0x7F0F003B
 			public const int support_simple_spinner_dropdown_item = 2131689531;
@@ -3232,6 +3355,9 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F16000B
 			public const int Base_Animation_AppCompat_Tooltip = 2132148235;
+			
+			// aapt resource value: 0x7F160001
+			public const int Base_CardView = 2132148225;
 			
 			// aapt resource value: 0x7F16000C
 			public const int Base_DialogWindowTitleBackground_AppCompat = 2132148236;
@@ -3706,6 +3832,15 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F1600A9
 			public const int Base_Widget_Design_TabLayout = 2132148393;
+			
+			// aapt resource value: 0x7F160002
+			public const int CardView = 2132148226;
+			
+			// aapt resource value: 0x7F160003
+			public const int CardView_Dark = 2132148227;
+			
+			// aapt resource value: 0x7F160004
+			public const int CardView_Light = 2132148228;
 			
 			// aapt resource value: 0x7F1600AA
 			public const int Platform_AppCompat = 2132148394;
@@ -5222,6 +5357,60 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F080238
 			public const int ButtonBarLayout_allowStacking = 2131231288;
+			
+			public static int[] CardView = new int[] {
+					16843072,
+					16843071,
+					2130968577,
+					2130968578,
+					2130968579,
+					2130968580,
+					2130968581,
+					2130968582,
+					2130968583,
+					2130968584,
+					2130968585,
+					2130968586,
+					2130968587};
+			
+			// aapt resource value: 0x7F080541
+			public const int CardView_android_minHeight = 2131232065;
+			
+			// aapt resource value: 0x1
+			public const int CardView_android_minWidth = 1;
+			
+			// aapt resource value: 0x2
+			public const int CardView_cardBackgroundColor = 2;
+			
+			// aapt resource value: 0x3
+			public const int CardView_cardCornerRadius = 3;
+			
+			// aapt resource value: 0x4
+			public const int CardView_cardElevation = 4;
+			
+			// aapt resource value: 0x5
+			public const int CardView_cardMaxElevation = 5;
+			
+			// aapt resource value: 0x6
+			public const int CardView_cardPreventCornerOverlap = 6;
+			
+			// aapt resource value: 0x7
+			public const int CardView_cardUseCompatPadding = 7;
+			
+			// aapt resource value: 0x8
+			public const int CardView_contentPadding = 8;
+			
+			// aapt resource value: 0x9
+			public const int CardView_contentPaddingBottom = 9;
+			
+			// aapt resource value: 0x10
+			public const int CardView_contentPaddingLeft = 16;
+			
+			// aapt resource value: 0x11
+			public const int CardView_contentPaddingRight = 17;
+			
+			// aapt resource value: 0x12
+			public const int CardView_contentPaddingTop = 18;
 			
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130968658,

@@ -4,6 +4,8 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
+    <activity android:label="ListView_SpacePart_Activity" android:name="md54400d1996241cba83ce557dfd90bdc56.ListView_SpacePart_Activity" />
+    <activity android:label="Custom_Modal_Item" android:name="md54400d1996241cba83ce557dfd90bdc56.Custom_Modal_Item" />
     <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="md54400d1996241cba83ce557dfd90bdc56.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

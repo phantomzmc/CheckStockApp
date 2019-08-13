@@ -63,7 +63,10 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\ListView_SpacePart_Activity.cs" />
+    <Compile Include="Adapter\SpacePartsItemAdapter.cs" />
     <Compile Include="Class\SpaceParts.cs" />
+    <Compile Include="Component\Custom_Modal_Item.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +74,24 @@
     <Compile Include="WCFHttpService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Prompt-Black.ttf" />
+    <AndroidAsset Include="Assets\Prompt-BlackItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-Bold.ttf" />
+    <AndroidAsset Include="Assets\Prompt-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-ExtraBold.ttf" />
+    <AndroidAsset Include="Assets\Prompt-ExtraBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-ExtraLight.ttf" />
+    <AndroidAsset Include="Assets\Prompt-ExtraLightItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-Italic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-Light.ttf" />
+    <AndroidAsset Include="Assets\Prompt-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-Medium.ttf" />
+    <AndroidAsset Include="Assets\Prompt-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-Regular.ttf" />
+    <AndroidAsset Include="Assets\Prompt-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\Prompt-SemiBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Prompt-Thin.ttf" />
+    <AndroidAsset Include="Assets\Prompt-ThinItalic.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -103,10 +124,34 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Activity\" />
+    <AndroidResource Include="Resources\layout\custom_modal_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\cell_spacepart_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spacepart_listview.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

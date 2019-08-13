@@ -7,6 +7,9 @@ using System;
 using AndroidForBC;
 using System.ServiceModel;
 using System.Collections.Generic;
+using Android.Content;
+using Newtonsoft.Json;
+
 
 namespace CheckStockApp
 {
@@ -14,12 +17,14 @@ namespace CheckStockApp
     public class MainActivity : AppCompatActivity
     {
         List<SpacePartsList.SpacePart> _spacePartList;
+        ProgressDialog progress;
         EditText numSelf1;
         EditText numSelf2;
         EditText numSelf3;
         EditText numSelf4;
         Button searchItem;
         private ServiceClient _client;
+        public String selfMain;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,6 +51,7 @@ namespace CheckStockApp
 
         private void _client_selectSpacePartCompleted(object sender, selectSpacePartCompletedEventArgs e)
         {
+            progress.Dispose();
             string msg = null;
             if (e.Error != null)
             {
@@ -92,15 +98,28 @@ namespace CheckStockApp
                     this._spacePartList.Add(spacepart);
                 }
                 msg = "complete";
+
+
                 //this.checkFetchData();
             }
+            var m_listSpaceLayout = new Intent(this, typeof(ListView_SpacePart_Activity));
+            m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(_spacePartList));
+
+            this.StartActivity(m_listSpaceLayout);
         }
 
         private void searchItem_Click(object sender,EventArgs e)
         {
-            _client.selectSpacePartAsync("A-01-01-A", "2019-08-05", 1);
-            InitializeServiceClient
+            selfMain = numSelf1 + "-" + numSelf2 + "-" + numSelf3 + "-" + numSelf4;
+            _client.selectSpacePartAsync(selfMain, "2019-08-05", 1);
+            //this.InitializeServiceClient;
+            progress = new ProgressDialog(this);
+            progress.Indeterminate = true;
+            progress.SetProgressStyle(Android.App.ProgressDialogStyle.Spinner);
+            progress.SetMessage("Loading is Progress...");
 
+            progress.SetCancelable(false);
+            progress.Show();
         }
 
     }
