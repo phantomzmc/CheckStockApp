@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace CheckStockApp
 {
-    [Activity(Label = "ListView_SpacePart_Activity")]
+    [Activity(Label = "รายการสินค้า")]
     public class ListView_SpacePart_Activity : AppCompatActivity
     {
         ListView spaceListView;
@@ -37,7 +37,8 @@ namespace CheckStockApp
                 }
                 else if (spacePartsList.Count == 0)
                 {
-
+                    var m_main = new Intent(this, typeof(Activity_NoItem));
+                    this.StartActivity(m_main);
                 }
             }
             catch
@@ -51,11 +52,15 @@ namespace CheckStockApp
         private void spacepartlist_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int position = e.Position;
-            var m_listSpaceLayout = new Intent(this, typeof(Custom_Modal_Item));
-            m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(spacePartsList));
-            m_listSpaceLayout.PutExtra("Index", position.ToString());
-            this.StartActivity(m_listSpaceLayout);
-
+            //var m_listSpaceLayout = new Intent(this, typeof(Custom_Modal_Item));
+            //m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(spacePartsList));
+            //m_listSpaceLayout.PutExtra("Index", position.ToString());
+            //this.StartActivity(m_listSpaceLayout);
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            Custom_Modal_Item fragment = new Custom_Modal_Item(spacePartsList, position);
+            transaction.Replace(Resource.Id.fragments, fragment);
+            transaction.AddToBackStack(null);
+            transaction.Commit();
         }
     }
 }

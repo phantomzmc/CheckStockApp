@@ -27,6 +27,12 @@ public partial class SpacePart : object
     
     private double Cost_Price_UnitField;
     
+    private string Count1Field;
+    
+    private string Count2Field;
+    
+    private string Count3Field;
+    
     private System.DateTime Date_Count_StockField;
     
     private string Group_ItemField;
@@ -85,6 +91,45 @@ public partial class SpacePart : object
         set
         {
             this.Cost_Price_UnitField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public string Count1
+    {
+        get
+        {
+            return this.Count1Field;
+        }
+        set
+        {
+            this.Count1Field = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public string Count2
+    {
+        get
+        {
+            return this.Count2Field;
+        }
+        set
+        {
+            this.Count2Field = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public string Count3
+    {
+        get
+        {
+            return this.Count3Field;
+        }
+        set
+        {
+            this.Count3Field = value;
         }
     }
     
@@ -238,9 +283,14 @@ public interface IService
 {
     
     [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService/selectSpacePart", ReplyAction="http://tempuri.org/IService/selectSpacePartResponse")]
-    System.IAsyncResult BeginselectSpacePart(string self_main, string date_count_stock, int id_brach, System.AsyncCallback callback, object asyncState);
+    System.IAsyncResult BeginselectSpacePart(string self_main, string date_count_stock, int id_brach, int round_count, System.AsyncCallback callback, object asyncState);
     
     SpacePart[] EndselectSpacePart(System.IAsyncResult result);
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IService/updateDetail_CountStock", ReplyAction="http://tempuri.org/IService/updateDetail_CountStockResponse")]
+    System.IAsyncResult BeginupdateDetail_CountStock(string id_item, int round_count, int id_brach, string date_count_stock, int count_value, System.AsyncCallback callback, object asyncState);
+    
+    int EndupdateDetail_CountStock(System.IAsyncResult result);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -273,6 +323,29 @@ public partial class selectSpacePartCompletedEventArgs : System.ComponentModel.A
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class updateDetail_CountStockCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+    
+    private object[] results;
+    
+    public updateDetail_CountStockCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+            base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+    
+    public int Result
+    {
+        get
+        {
+            base.RaiseExceptionIfNecessary();
+            return ((int)(this.results[0]));
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, IService
 {
     
@@ -281,6 +354,12 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
     private EndOperationDelegate onEndselectSpacePartDelegate;
     
     private System.Threading.SendOrPostCallback onselectSpacePartCompletedDelegate;
+    
+    private BeginOperationDelegate onBeginupdateDetail_CountStockDelegate;
+    
+    private EndOperationDelegate onEndupdateDetail_CountStockDelegate;
+    
+    private System.Threading.SendOrPostCallback onupdateDetail_CountStockCompletedDelegate;
     
     private BeginOperationDelegate onBeginOpenDelegate;
     
@@ -349,14 +428,16 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
     
     public event System.EventHandler<selectSpacePartCompletedEventArgs> selectSpacePartCompleted;
     
+    public event System.EventHandler<updateDetail_CountStockCompletedEventArgs> updateDetail_CountStockCompleted;
+    
     public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
     
     public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
     
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    System.IAsyncResult IService.BeginselectSpacePart(string self_main, string date_count_stock, int id_brach, System.AsyncCallback callback, object asyncState)
+    System.IAsyncResult IService.BeginselectSpacePart(string self_main, string date_count_stock, int id_brach, int round_count, System.AsyncCallback callback, object asyncState)
     {
-        return base.Channel.BeginselectSpacePart(self_main, date_count_stock, id_brach, callback, asyncState);
+        return base.Channel.BeginselectSpacePart(self_main, date_count_stock, id_brach, round_count, callback, asyncState);
     }
     
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -370,7 +451,8 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
         string self_main = ((string)(inValues[0]));
         string date_count_stock = ((string)(inValues[1]));
         int id_brach = ((int)(inValues[2]));
-        return ((IService)(this)).BeginselectSpacePart(self_main, date_count_stock, id_brach, callback, asyncState);
+        int round_count = ((int)(inValues[3]));
+        return ((IService)(this)).BeginselectSpacePart(self_main, date_count_stock, id_brach, round_count, callback, asyncState);
     }
     
     private object[] OnEndselectSpacePart(System.IAsyncResult result)
@@ -389,12 +471,12 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
         }
     }
     
-    public void selectSpacePartAsync(string self_main, string date_count_stock, int id_brach)
+    public void selectSpacePartAsync(string self_main, string date_count_stock, int id_brach, int round_count)
     {
-        this.selectSpacePartAsync(self_main, date_count_stock, id_brach, null);
+        this.selectSpacePartAsync(self_main, date_count_stock, id_brach, round_count, null);
     }
     
-    public void selectSpacePartAsync(string self_main, string date_count_stock, int id_brach, object userState)
+    public void selectSpacePartAsync(string self_main, string date_count_stock, int id_brach, int round_count, object userState)
     {
         if ((this.onBeginselectSpacePartDelegate == null))
         {
@@ -411,7 +493,73 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
         base.InvokeAsync(this.onBeginselectSpacePartDelegate, new object[] {
                     self_main,
                     date_count_stock,
-                    id_brach}, this.onEndselectSpacePartDelegate, this.onselectSpacePartCompletedDelegate, userState);
+                    id_brach,
+                    round_count}, this.onEndselectSpacePartDelegate, this.onselectSpacePartCompletedDelegate, userState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.IAsyncResult IService.BeginupdateDetail_CountStock(string id_item, int round_count, int id_brach, string date_count_stock, int count_value, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginupdateDetail_CountStock(id_item, round_count, id_brach, date_count_stock, count_value, callback, asyncState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    int IService.EndupdateDetail_CountStock(System.IAsyncResult result)
+    {
+        return base.Channel.EndupdateDetail_CountStock(result);
+    }
+    
+    private System.IAsyncResult OnBeginupdateDetail_CountStock(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        string id_item = ((string)(inValues[0]));
+        int round_count = ((int)(inValues[1]));
+        int id_brach = ((int)(inValues[2]));
+        string date_count_stock = ((string)(inValues[3]));
+        int count_value = ((int)(inValues[4]));
+        return ((IService)(this)).BeginupdateDetail_CountStock(id_item, round_count, id_brach, date_count_stock, count_value, callback, asyncState);
+    }
+    
+    private object[] OnEndupdateDetail_CountStock(System.IAsyncResult result)
+    {
+        int retVal = ((IService)(this)).EndupdateDetail_CountStock(result);
+        return new object[] {
+                retVal};
+    }
+    
+    private void OnupdateDetail_CountStockCompleted(object state)
+    {
+        if ((this.updateDetail_CountStockCompleted != null))
+        {
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.updateDetail_CountStockCompleted(this, new updateDetail_CountStockCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+        }
+    }
+    
+    public void updateDetail_CountStockAsync(string id_item, int round_count, int id_brach, string date_count_stock, int count_value)
+    {
+        this.updateDetail_CountStockAsync(id_item, round_count, id_brach, date_count_stock, count_value, null);
+    }
+    
+    public void updateDetail_CountStockAsync(string id_item, int round_count, int id_brach, string date_count_stock, int count_value, object userState)
+    {
+        if ((this.onBeginupdateDetail_CountStockDelegate == null))
+        {
+            this.onBeginupdateDetail_CountStockDelegate = new BeginOperationDelegate(this.OnBeginupdateDetail_CountStock);
+        }
+        if ((this.onEndupdateDetail_CountStockDelegate == null))
+        {
+            this.onEndupdateDetail_CountStockDelegate = new EndOperationDelegate(this.OnEndupdateDetail_CountStock);
+        }
+        if ((this.onupdateDetail_CountStockCompletedDelegate == null))
+        {
+            this.onupdateDetail_CountStockCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnupdateDetail_CountStockCompleted);
+        }
+        base.InvokeAsync(this.onBeginupdateDetail_CountStockDelegate, new object[] {
+                    id_item,
+                    round_count,
+                    id_brach,
+                    date_count_stock,
+                    count_value}, this.onEndupdateDetail_CountStockDelegate, this.onupdateDetail_CountStockCompletedDelegate, userState);
     }
     
     private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState)
@@ -511,12 +659,13 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
         {
         }
         
-        public System.IAsyncResult BeginselectSpacePart(string self_main, string date_count_stock, int id_brach, System.AsyncCallback callback, object asyncState)
+        public System.IAsyncResult BeginselectSpacePart(string self_main, string date_count_stock, int id_brach, int round_count, System.AsyncCallback callback, object asyncState)
         {
-            object[] _args = new object[3];
+            object[] _args = new object[4];
             _args[0] = self_main;
             _args[1] = date_count_stock;
             _args[2] = id_brach;
+            _args[3] = round_count;
             System.IAsyncResult _result = base.BeginInvoke("selectSpacePart", _args, callback, asyncState);
             return _result;
         }
@@ -525,6 +674,25 @@ public partial class ServiceClient : System.ServiceModel.ClientBase<IService>, I
         {
             object[] _args = new object[0];
             SpacePart[] _result = ((SpacePart[])(base.EndInvoke("selectSpacePart", _args, result)));
+            return _result;
+        }
+        
+        public System.IAsyncResult BeginupdateDetail_CountStock(string id_item, int round_count, int id_brach, string date_count_stock, int count_value, System.AsyncCallback callback, object asyncState)
+        {
+            object[] _args = new object[5];
+            _args[0] = id_item;
+            _args[1] = round_count;
+            _args[2] = id_brach;
+            _args[3] = date_count_stock;
+            _args[4] = count_value;
+            System.IAsyncResult _result = base.BeginInvoke("updateDetail_CountStock", _args, callback, asyncState);
+            return _result;
+        }
+        
+        public int EndupdateDetail_CountStock(System.IAsyncResult result)
+        {
+            object[] _args = new object[0];
+            int _result = ((int)(base.EndInvoke("updateDetail_CountStock", _args, result)));
             return _result;
         }
     }

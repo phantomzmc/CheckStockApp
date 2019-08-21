@@ -36,6 +36,8 @@ C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\res\mip
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\res\layout\custom_modal_item.xml
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\res\layout\cell_spacepart_item.xml
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\res\layout\spacepart_listview.xml
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\res\layout\activity_noitem.xml
+C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\res\layout\activity_round_count.xml
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\R.cs.flag
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\R.txt
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Debug\81\uploadflags.txt

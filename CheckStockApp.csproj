@@ -63,11 +63,14 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\Activity_NoItem.cs" />
     <Compile Include="Activity\ListView_SpacePart_Activity.cs" />
+    <Compile Include="Activity\RoundCount_Activity.cs" />
     <Compile Include="Adapter\SpacePartsItemAdapter.cs" />
     <Compile Include="Class\SpaceParts.cs" />
     <Compile Include="Component\Custom_Modal_Item.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
+    <Compile Include="Fragment\DatePickerFragment.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />
@@ -150,6 +153,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\spacepart_listview.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_noitem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_round_count.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

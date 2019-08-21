@@ -1,199 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:minWidth="25px"
+	android:minHeight="25px"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/scrollView1">
+
+	<LinearLayout
 		android:orientation="vertical"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="match_parent"
+		android:background="#eee">
 
-		<LinearLayout
-			android:layout_width="match_parent"
+		<TextView
+			android:text="รายละเอียดสินค้า : "
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="30px"
-			android:layout_marginLeft="30px"
-			android:layout_marginRight="30px"
-			android:orientation="vertical">
-
-			<TextView
-				android:text="รายละเอียดสินค้า : "
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:minWidth="25px"
-				android:minHeight="25px"
-				android:textSize="20dp"
-				android:textColor="#000"
-				android:id="@+id/f_idItem_textView" />
-
-		<LinearLayout
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			android:layout_marginTop="30px"
-			android:layout_marginLeft="30px">
-
-			<TextView
-				android:text="รหัสสินค้า : "
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:minWidth="25px"
-				android:minHeight="25px"
-				android:textSize="20dp"
-				android:textColor="#000"
-				android:id="@+id/f_idItem_textView" />
-			<TextView
-				android:text="000000000"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:minWidth="25px"
-				android:minHeight="25px"
-				android:textSize="20dp"
-				android:textColor="#000"
-				android:id="@+id/idItem_textView" />
-		</LinearLayout>
-		<LinearLayout
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:textSize="26dp"
+			android:textColor="#000"
+			android:layout_marginTop = "20dp"
+			android:layout_marginLeft = "10dp"
+			android:id="@+id/title_textView" />
+		<FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="1000dp">
+			<android.support.v7.widget.CardView
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="30px"
-				android:layout_marginLeft="30px">
-
-				<TextView
-					android:text="ชื่อสินค้า : "
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
+				android:layout_marginTop = "20dp"
+				android:layout_marginLeft = "10dp"
+				android:layout_marginRight = "10dp"
+				android:layout_marginBottom = "20dp"
+				card_view:cardElevation="4dp"
+				card_view:cardUseCompatPadding="true"
+				card_view:cardCornerRadius="7.5dp">
+				<LinearLayout
+					android:id="@+id/relativeLayout1"
 					android:minWidth="25px"
 					android:minHeight="25px"
-					android:textSize="20dp"
-					android:textColor="#000"
-					android:id="@+id/f_nameItem_textView" />
-				<TextView
-					android:text="000000000"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-					android:textSize="20dp"
-					android:textColor="#000"
-					android:id="@+id/nameItem_textView" />
-		</LinearLayout>
-		<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="30px"
-				android:layout_marginLeft="30px">
-
-				<TextView
-					android:text="สินค้าทั้งหมด : "
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-					android:textSize="20dp"
-					android:textColor="#000"			
-					android:id="@+id/f_total_textView" />
-				<TextView
-					android:text="000000000"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-			android:textSize="20dp"
-				android:textColor="#000"
-					android:id="@+id/total_textView" />
-		</LinearLayout>
-		<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="30px"
-				android:layout_marginLeft="30px">
-
-				<TextView
-					android:text="สินค้าคงเหลือเดือนก่อน : "
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-			android:textSize="20dp"
-				android:textColor="#000"
-					android:id="@+id/f_last_month_textView" />
-				<TextView
-					android:text="000000000"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-			android:textSize="20dp"
-				android:textColor="#000"
-					android:id="@+id/last_month_textView" />
-		</LinearLayout>
-		<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="30px"
-				android:layout_marginLeft="30px">
-
-				<TextView
-					android:text="ขายทั้งหมด : "
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-			android:textSize="20dp"
-				android:textColor="#000"
-					android:id="@+id/f_amound_total_textView" />
-				<TextView
-					android:text="000000000"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-			android:textSize="20dp"
-				android:textColor="#000"
-					android:id="@+id/amound_total_textView" />
-		</LinearLayout>
-
-		<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="50dp"
-				android:gravity="center">
-
-				<TextView
-					android:text="ขายทั้งหมด : "
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:minWidth="25px"
-					android:minHeight="25px"
-			android:textSize="20dp"
-				android:textColor="#000"
-					android:id="@+id/amound_total_textView" />
-				<android.support.design.widget.TextInputEditText
-					android:layout_width="200dp"
-					android:layout_height="50dp"
-					android:id="@+id/numself1_textInput"
-					android:hint="A"
-					android:layout_marginLeft="10dp"
-					android:layout_marginRight="10dp"
-					android:layout_marginTop="5dp"
-					android:layout_marginBottom="5dp"
-					android:textColor="#000"
-					android:inputType="text"/>
-		</LinearLayout>
-		<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="50dp"
-				android:gravity="center">
-
-				<Button
-					android:text="ยืนยัน"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:id="@+id/submit_button" />
-		</LinearLayout>
+					android:orientation="vertical">
 
+					<LinearLayout
+						android:id="@+id/relativeLayout1"
+						android:minWidth="25px"
+						android:minHeight="25px"
+						android:layout_marginTop="30dp"
+						android:layout_marginLeft="30dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
+							<TextView
+								android:text="รหัสสินค้า : "
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/f_idItem_textView" />
+							<TextView
+								android:text="000000000"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/idItem_textView" />
+						</LinearLayout>
+						<LinearLayout
+							android:minWidth="25px"
+							android:minHeight="25px"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginTop="30dp"
+							android:layout_marginLeft="30dp">
+							<TextView
+								android:text="ชื่อสินค้า : "
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/f_nameItem_textView" />
+							<TextView
+								android:text="000000000"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/nameItem_textView" />
+						</LinearLayout>
+						<LinearLayout
+							android:minWidth="25px"
+							android:minHeight="25px"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginTop="30dp"
+							android:layout_marginLeft="30dp">
+							<TextView
+								android:text="สินค้าทั้งหมด : "
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/f_total_textView" />
+							<TextView
+								android:text="000000000"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/total_textView" />
+						</LinearLayout>
+						<LinearLayout
+							android:minWidth="25px"
+							android:minHeight="25px"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginTop="30dp"
+							android:layout_marginLeft="30dp">
+							<TextView
+								android:text="สินค้าคงเหลือเดือนก่อน : "
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/f_last_month_textView" />
+							<TextView
+								android:text="000000000"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/last_month_textView" />
+						</LinearLayout>
+						<LinearLayout
+							android:minWidth="25px"
+							android:minHeight="25px"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginTop="30dp"
+							android:layout_marginLeft="30dp">
+							<TextView
+								android:text="จำนวนขายทั้งหมด : "
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/f_amound_total_textView" />
+							<TextView
+								android:text="000000000"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/amound_total_textView" />
+						</LinearLayout>
+						<LinearLayout
+							android:minWidth="25px"
+							android:minHeight="25px"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="30dp"
+							android:layout_marginRight="30dp"
+							android:layout_marginTop="50dp"
+							android:gravity="center">
+							<TextView
+								android:text="จำนวนที่นับได้ : "
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:minWidth="25px"
+								android:minHeight="25px"
+								android:textSize="20dp"
+								android:textColor="#000"
+								android:id="@+id/f_inputcount_textView" />
+							<android.support.design.widget.TextInputEditText
+								android:id="@+id/inputcount_editText"
+								android:layout_width="match_parent"
+								android:layout_height="50dp"
+								android:hint="กรอกจำนวน"
+								android:layout_marginLeft="10dp"
+								android:layout_marginRight="10dp"
+								android:layout_marginTop="5dp"
+								android:layout_marginBottom="5dp"
+								android:textColor="#000"
+								android:inputType="number"/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/relativeLayout1"
+							android:minWidth="25px"
+							android:minHeight="25px"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:gravity="center"
+							android:layout_marginLeft="30dp"
+							android:layout_marginRight="30dp"
+							android:layout_marginBottom="20dp"
+							android:layout_marginTop="20dp">
+
+							<Button
+								android:id="@+id/submit_button"
+								android:text="บันทึก"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textColor="#fff"
+								android:background="@color/colorAccent"/>
+						</LinearLayout>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+		</FrameLayout>
 	</LinearLayout>
-</LinearLayout>
+</ScrollView>

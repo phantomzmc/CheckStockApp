@@ -33,6 +33,9 @@ namespace CheckStockApp
             public double Amound_Sold { get; set; }
             public double Number_Parts_Booking { get; set; }
             public double Inventory_Last_Month { get; set; }
+            public double Count1 { get; set; }
+            public double Count2 { get; set; }
+            public double Count3 { get; set; }
 
             public SpacePart()
             {
@@ -50,6 +53,9 @@ namespace CheckStockApp
                 this.Amound_Sold = 0.0;
                 this.Number_Parts_Booking = 0.0;
                 this.Inventory_Last_Month = 0.0;
+                this.Count1 = 0.0;
+                this.Count2 = 0.0;
+                this.Count3 = 0.0;
             }
 
         }
