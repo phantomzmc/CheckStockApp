@@ -44,7 +44,7 @@
 
 			</LinearLayout>
 			<LinearLayout
-				android:orientation="vertical"
+				android:orientation="horizontal"
 				android:padding="10dip"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
@@ -54,22 +54,24 @@
 				<TextView
 					android:id="@+id/f_branch_spinner"
 					android:text="สาขา :"
-					android:layout_width="match_parent"
+					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp"
 					android:textColor="#000"
 					android:textSize="16dp"/>
 				<Spinner
 					android:id="@+id/branch_spinner"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
+					android:layout_marginLeft="20dp"
 				/>
 			</LinearLayout>
 			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:orientation="vertical"
-				android:layout_gravity="center"
-				android:gravity="center"
+				android:orientation="horizontal"
+
 				android:layout_marginTop="20dp"
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
@@ -77,18 +79,19 @@
 				<TextView
 					android:id="@+id/datePick_textView"
 					android:text="Ex.01/01/2019"
-					android:layout_width="match_parent"
+					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp"
 					android:layout_marginBottom="20dp"
-					android:layout_gravity="center"
-					android:gravity="center"
 					android:textColor="#000"
 					android:textSize="16dp"/>
 				<Button
 					android:id="@+id/datePick_Btn"
 					android:text="วันที่นับ"
-					android:layout_width="wrap_content"
+					android:layout_width="match_parent"
 					android:layout_height="50dp"
+					android:layout_marginLeft="20dp"
 					android:background="#3d5afe"
 					android:textColor="#fff"/>
 			</LinearLayout>

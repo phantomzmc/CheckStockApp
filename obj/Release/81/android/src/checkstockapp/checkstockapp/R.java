@@ -3105,6 +3105,7 @@ containing a value of this type.
         public static final int blocking=0x7f080057;
         public static final int bottom=0x7f08003d;
         public static final int branch_spinner=0x7f08009c;
+        public static final int btnaddnewmech=0x7f0800db;
         public static final int buttonPanel=0x7f080063;
         public static final int cancel_action=0x7f0800cb;
         public static final int cellitem_layout=0x7f0800a0;
@@ -3181,9 +3182,9 @@ containing a value of this type.
         public static final int linearLayout2=0x7f080092;
         public static final int listMode=0x7f08001d;
         public static final int list_item=0x7f080061;
-        public static final int masked=0x7f0800dd;
+        public static final int masked=0x7f0800df;
         public static final int media_actions=0x7f0800cd;
-        public static final int message=0x7f0800db;
+        public static final int message=0x7f0800dd;
         public static final int middle=0x7f080031;
         public static final int mini=0x7f080053;
         public static final int multiply=0x7f080028;
@@ -3245,7 +3246,7 @@ containing a value of this type.
         public static final int snackbar_action=0x7f0800c0;
         public static final int snackbar_text=0x7f0800bf;
         public static final int snap=0x7f080043;
-        public static final int spacepart_listView=0x7f0800da;
+        public static final int spacepart_listView=0x7f0800dc;
         public static final int spacer=0x7f080064;
         public static final int split_action_bar=0x7f080008;
         public static final int src_atop=0x7f08002a;
@@ -3256,6 +3257,7 @@ containing a value of this type.
         public static final int submenuarrow=0x7f080076;
         public static final int submit_area=0x7f080087;
         public static final int submit_button=0x7f0800b8;
+        public static final int swipeRefreshLayout=0x7f0800da;
         public static final int tabMode=0x7f08001f;
         public static final int tag_transition_group=0x7f080019;
         public static final int text=0x7f08001a;
@@ -3286,7 +3288,7 @@ containing a value of this type.
         public static final int up=0x7f080009;
         public static final int useLogo=0x7f080026;
         public static final int view_offset_helper=0x7f080016;
-        public static final int visible=0x7f0800dc;
+        public static final int visible=0x7f0800de;
         public static final int withText=0x7f08003c;
         public static final int wrap_content=0x7f08002e;
     }

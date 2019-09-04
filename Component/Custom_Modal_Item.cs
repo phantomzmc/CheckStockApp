@@ -160,7 +160,7 @@ namespace CheckStockApp
             string date_count_stock = date_count;
             int count_value = Convert.ToInt32(InputCountEditText.Text);
             _client.updateDetail_CountStockAsync(iditem,round,brach,date_count_stock,count_value);
-
+            _client.selectSpacePartAsync(spaceParts[position].Self_Main.ToString(), date_count, brach, round);
         }
 
         private void setText()

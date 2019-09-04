@@ -53,12 +53,18 @@ namespace CheckStockApp
                 var group_item = view.FindViewById<TextView>(Resource.Id.groupItem_textView);
                 var totalstock_item = view.FindViewById<TextView>(Resource.Id.totalstock_textView);
                 var costunit_item = view.FindViewById<TextView>(Resource.Id.costunit_textView);
+                var f_group_item = view.FindViewById<TextView>(Resource.Id.f_groupItem_textView);
+                var f_totalstock_item = view.FindViewById<TextView>(Resource.Id.f_totalstock_textView);
+                var f_costunit_item = view.FindViewById<TextView>(Resource.Id.f_costunit_textView);
 
                 id_item.Typeface = openSansRegular;
                 name_item.Typeface = openSansRegular;
                 group_item.Typeface = openSansRegular;
                 totalstock_item.Typeface = openSansRegular;
                 costunit_item.Typeface = openSansRegular;
+                f_group_item.Typeface = openSansRegular;
+                f_totalstock_item.Typeface = openSansRegular;
+                f_costunit_item.Typeface = openSansRegular;
 
                 view.Tag = new ViewHolder() { IDItem_TextView = id_item, NameItem_TextView = name_item, GroupItem_TextView = group_item, TotalStock_TextView = totalstock_item, CostPriceUnit_TextView = costunit_item};
 
