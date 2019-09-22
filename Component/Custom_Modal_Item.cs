@@ -140,11 +140,16 @@ namespace CheckStockApp
         }
         private void goMain(object sender, EventArgs e)
         {
+            //ListView_SpacePart_Activity listView_SpacePart_Activity = new ListView_SpacePart_Activity();
             alertDiag.Dispose();
             this.updateStock();
             this.checkUpdate();
 
-            //await Navigation.PushAsync(new ListView_SpacePart_Activity());
+            //listView_SpacePart_Activity.Remoteitem(spaceParts , position);
+            spaceParts.RemoveAt(position);
+            var m_listSpaceLayout = new Intent(Activity, typeof(ListView_SpacePart_Activity));
+            m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(spaceParts));
+            this.StartActivity(m_listSpaceLayout);
 
         }
         public async void checkUpdate()

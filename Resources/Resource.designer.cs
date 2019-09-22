@@ -2511,8 +2511,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080044
 			public const int auto = 2131230788;
 			
-			// aapt resource value: 0x7f080098
-			public const int backSearch_btn = 2131230872;
+			// aapt resource value: 0x7f080099
+			public const int backSearch_btn = 2131230873;
 			
 			// aapt resource value: 0x7f08002f
 			public const int beginning = 2131230767;
@@ -2523,8 +2523,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f08009c
-			public const int branch_spinner = 2131230876;
+			// aapt resource value: 0x7f08009d
+			public const int branch_spinner = 2131230877;
 			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
@@ -2532,8 +2532,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800cb
 			public const int cancel_action = 2131230923;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int cellitem_layout = 2131230880;
+			// aapt resource value: 0x7f0800a1
+			public const int cellitem_layout = 2131230881;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -2544,8 +2544,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080047
 			public const int center_vertical = 2131230791;
 			
-			// aapt resource value: 0x7f080095
-			public const int changeRoundCount__btn = 2131230869;
+			// aapt resource value: 0x7f080096
+			public const int changeRoundCount__btn = 2131230870;
 			
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
@@ -2571,8 +2571,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800bc
 			public const int coordinator = 2131230908;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int costunit_textView = 2131230888;
+			// aapt resource value: 0x7f0800a9
+			public const int costunit_textView = 2131230889;
 			
 			// aapt resource value: 0x7f08006d
 			public const int custom = 2131230829;
@@ -2580,11 +2580,11 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f08006c
 			public const int customPanel = 2131230828;
 			
-			// aapt resource value: 0x7f08009e
-			public const int datePick_Btn = 2131230878;
+			// aapt resource value: 0x7f08009f
+			public const int datePick_Btn = 2131230879;
 			
-			// aapt resource value: 0x7f08009d
-			public const int datePick_textView = 2131230877;
+			// aapt resource value: 0x7f08009e
+			public const int datePick_textView = 2131230878;
 			
 			// aapt resource value: 0x7f08007a
 			public const int decor_content_parent = 2131230842;
@@ -2637,14 +2637,14 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800b4
 			public const int f_amound_total_textView = 2131230900;
 			
-			// aapt resource value: 0x7f08009b
-			public const int f_branch_spinner = 2131230875;
+			// aapt resource value: 0x7f08009c
+			public const int f_branch_spinner = 2131230876;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int f_costunit_textView = 2131230887;
+			// aapt resource value: 0x7f0800a8
+			public const int f_costunit_textView = 2131230888;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int f_groupItem_textView = 2131230883;
+			// aapt resource value: 0x7f0800a4
+			public const int f_groupItem_textView = 2131230884;
 			
 			// aapt resource value: 0x7f0800ac
 			public const int f_idItem_textView = 2131230892;
@@ -2658,14 +2658,14 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800ae
 			public const int f_nameItem_textView = 2131230894;
 			
-			// aapt resource value: 0x7f080099
-			public const int f_titleApp_textView = 2131230873;
+			// aapt resource value: 0x7f08009a
+			public const int f_titleApp_textView = 2131230874;
 			
 			// aapt resource value: 0x7f0800b0
 			public const int f_total_textView = 2131230896;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int f_totalstock_textView = 2131230885;
+			// aapt resource value: 0x7f0800a6
+			public const int f_totalstock_textView = 2131230886;
 			
 			// aapt resource value: 0x7f080050
 			public const int fill = 2131230800;
@@ -2682,14 +2682,14 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
-			// aapt resource value: 0x7f080096
-			public const int fragments = 2131230870;
+			// aapt resource value: 0x7f080097
+			public const int fragments = 2131230871;
 			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int groupItem_textView = 2131230884;
+			// aapt resource value: 0x7f0800a5
+			public const int groupItem_textView = 2131230885;
 			
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
@@ -2703,8 +2703,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800d8
 			public const int icon_group = 2131230936;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int idItemTextView = 2131230881;
+			// aapt resource value: 0x7f0800a2
+			public const int idItemTextView = 2131230882;
 			
 			// aapt resource value: 0x7f0800ad
 			public const int idItem_textView = 2131230893;
@@ -2745,8 +2745,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f08008b
 			public const int linearLayout1 = 2131230859;
 			
-			// aapt resource value: 0x7f080092
-			public const int linearLayout2 = 2131230866;
+			// aapt resource value: 0x7f080093
+			public const int linearLayout2 = 2131230867;
 			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
@@ -2754,14 +2754,14 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800dd
-			public const int masked = 2131230941;
+			// aapt resource value: 0x7f0800de
+			public const int masked = 2131230942;
 			
 			// aapt resource value: 0x7f0800cd
 			public const int media_actions = 2131230925;
 			
-			// aapt resource value: 0x7f0800db
-			public const int message = 2131230939;
+			// aapt resource value: 0x7f0800dc
+			public const int message = 2131230940;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2775,8 +2775,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800af
 			public const int nameItem_textView = 2131230895;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int name_textView = 2131230882;
+			// aapt resource value: 0x7f0800a3
+			public const int name_textView = 2131230883;
 			
 			// aapt resource value: 0x7f0800c1
 			public const int navigation_header_container = 2131230913;
@@ -2784,11 +2784,11 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
 			
-			// aapt resource value: 0x7f08009f
-			public const int next_Btn = 2131230879;
+			// aapt resource value: 0x7f0800a0
+			public const int next_Btn = 2131230880;
 			
-			// aapt resource value: 0x7f080097
-			public const int noitemsTextView = 2131230871;
+			// aapt resource value: 0x7f080098
+			public const int noitemsTextView = 2131230872;
 			
 			// aapt resource value: 0x7f080022
 			public const int none = 2131230754;
@@ -2805,17 +2805,17 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800cf
 			public const int notification_main_column_container = 2131230927;
 			
-			// aapt resource value: 0x7f08008d
-			public const int numself1_textInput = 2131230861;
-			
-			// aapt resource value: 0x7f08008f
-			public const int numself2_textInput = 2131230863;
+			// aapt resource value: 0x7f08008e
+			public const int numself1_textInput = 2131230862;
 			
 			// aapt resource value: 0x7f080090
-			public const int numself3_textInput = 2131230864;
+			public const int numself2_textInput = 2131230864;
 			
 			// aapt resource value: 0x7f080091
-			public const int numself4_textInput = 2131230865;
+			public const int numself3_textInput = 2131230865;
+			
+			// aapt resource value: 0x7f080092
+			public const int numself4_textInput = 2131230866;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -2850,8 +2850,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800d1
 			public const int right_side = 2131230929;
 			
-			// aapt resource value: 0x7f08009a
-			public const int roundcount_textInput = 2131230874;
+			// aapt resource value: 0x7f08009b
+			public const int roundcount_textInput = 2131230875;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -2877,17 +2877,17 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080068
 			public const int scrollView = 2131230824;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int scrollView1 = 2131230889;
+			// aapt resource value: 0x7f08008c
+			public const int scrollView1 = 2131230860;
 			
 			// aapt resource value: 0x7f080055
 			public const int scrollable = 2131230805;
 			
-			// aapt resource value: 0x7f080094
-			public const int searchItemOutShelf_btn = 2131230868;
+			// aapt resource value: 0x7f080095
+			public const int searchItemOutShelf_btn = 2131230869;
 			
-			// aapt resource value: 0x7f080093
-			public const int searchItem_btn = 2131230867;
+			// aapt resource value: 0x7f080094
+			public const int searchItem_btn = 2131230868;
 			
 			// aapt resource value: 0x7f080080
 			public const int search_badge = 2131230848;
@@ -2946,8 +2946,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080043
 			public const int snap = 2131230787;
 			
-			// aapt resource value: 0x7f0800da
-			public const int spacepart_listView = 2131230938;
+			// aapt resource value: 0x7f0800db
+			public const int spacepart_listView = 2131230939;
 			
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
@@ -2979,6 +2979,9 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800b8
 			public const int submit_button = 2131230904;
 			
+			// aapt resource value: 0x7f0800da
+			public const int swipeRefreshLayout = 2131230938;
+			
 			// aapt resource value: 0x7f08001f
 			public const int tabMode = 2131230751;
 			
@@ -2997,8 +3000,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
 			
-			// aapt resource value: 0x7f08008e
-			public const int textView1 = 2131230862;
+			// aapt resource value: 0x7f08008f
+			public const int textView1 = 2131230863;
 			
 			// aapt resource value: 0x7f0800c6
 			public const int text_input_password_toggle = 2131230918;
@@ -3015,8 +3018,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
 			
-			// aapt resource value: 0x7f08008c
-			public const int titleApp_textView = 2131230860;
+			// aapt resource value: 0x7f08008d
+			public const int titleApp_textView = 2131230861;
 			
 			// aapt resource value: 0x7f080071
 			public const int titleDividerNoCustom = 2131230833;
@@ -3036,8 +3039,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f0800b1
 			public const int total_textView = 2131230897;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int totalstock_textView = 2131230886;
+			// aapt resource value: 0x7f0800a7
+			public const int totalstock_textView = 2131230887;
 			
 			// aapt resource value: 0x7f0800bd
 			public const int touch_outside = 2131230909;
@@ -3069,8 +3072,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800dc
-			public const int visible = 2131230940;
+			// aapt resource value: 0x7f0800dd
+			public const int visible = 2131230941;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

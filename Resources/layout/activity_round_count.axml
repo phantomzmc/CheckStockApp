@@ -10,6 +10,16 @@
 		android:layout_gravity="center"
 		android:gravity="center"
 		android:id="@+id/linearLayout1">
+        <ScrollView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/scrollView1">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
 			<LinearLayout
 				android:layout_marginLeft="30dp"
 				android:layout_marginBottom="20dp"
@@ -110,5 +120,7 @@
 					android:background="#7cb342"
 					android:textColor="#fff"/>
 			</LinearLayout>
+          </LinearLayout>
+        </ScrollView>
 	</LinearLayout>
 </LinearLayout>

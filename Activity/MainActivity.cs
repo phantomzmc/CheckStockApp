@@ -62,96 +62,39 @@ namespace CheckStockApp
 
         private void _client_selectSpacePartCompleted(object sender, selectSpacePartCompletedEventArgs e)
         {
-            progress.Dismiss();
-            string msg = null;
-            if (e.Error != null)
+            try
             {
-                msg = e.Error.Message;
-                Android.Support.V7.App.AlertDialog.Builder alertDiag = new Android.Support.V7.App.AlertDialog.Builder(this);
-                alertDiag.SetTitle("ไม่ค้นหารายการสินค้าได้");
-                alertDiag.SetMessage("กรุณาตรวจสอบอินเทอร์เน็ต อีกครั้ง!!");
-
-                Dialog diag = alertDiag.Create();
-                diag.Show();
-            }
-            else if (e.Cancelled)
-            {
-                msg = "Request was cancelled.";
-                Android.Support.V7.App.AlertDialog.Builder alertDiag = new Android.Support.V7.App.AlertDialog.Builder(this);
-                alertDiag.SetTitle("ไม่พบค้นหารายการสินค้า");
-                alertDiag.SetMessage("กรุณากรอกรหัสชั้นวางสินค้าให้ถูกต้อง !!");
-
-                Dialog diag = alertDiag.Create();
-                diag.Show();
-            }
-            else
-            {
-                this._spacePartList = new List<SpacePartsList.SpacePart>();
-
-                int round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
-
-                if(round_count == 1)
+                progress.Dismiss();
+                string msg = null;
+                if (e.Error != null)
                 {
-                    for (int i = 0; i < e.Result.Length; i++)
-                    {
-                        SpacePartsList.SpacePart spacepart = new SpacePartsList.SpacePart()
-                        {
-                            ID_Item = e.Result[i].ID_Item,
-                            Name_Item = e.Result[i].Name_Item,
-                            Group_Item = e.Result[i].Group_Item,
-                            Sell_Price_Unit = e.Result[i].Sell_Price_Unit,
-                            Sell_Price_All = e.Result[i].Sell_Price_All,
-                            Cost_Price_Unit = e.Result[i].Cost_Price_Unit,
-                            Cost_Price_All = e.Result[i].Cost_Price_All,
-                            Self_Main = e.Result[i].Self_Main,
-                            Self_Try = e.Result[i].Self_Try,
-                            Date_Count_Stock = e.Result[i].Date_Count_Stock,
-                            Total_Stock = e.Result[i].Total_Stock,
-                            Amound_Sold = e.Result[i].Amound_Sold,
-                            Number_Parts_Booking = e.Result[i].Number_Parts_Booking,
-                            Inventory_Last_Month = e.Result[i].Inventory_Last_Month,
-                            Count1 = Convert.ToDouble(e.Result[i].Count1),
-                            Count2 = Convert.ToDouble(e.Result[i].Count2),
-                            Count3 = Convert.ToDouble(e.Result[i].Count3),
-                        };
-                        this._spacePartList.Add(spacepart);
-                    }
+                    msg = e.Error.Message;
+                    Android.Support.V7.App.AlertDialog.Builder alertDiag = new Android.Support.V7.App.AlertDialog.Builder(this);
+                    alertDiag.SetTitle("ไม่ค้นหารายการสินค้าได้");
+                    alertDiag.SetMessage("กรุณาตรวจสอบอินเทอร์เน็ต อีกครั้ง!!");
+
+                    Dialog diag = alertDiag.Create();
+                    diag.Show();
                 }
-                else if(round_count == 2)
+                else if (e.Cancelled)
                 {
-                    for (int i = 0; i < e.Result.Length; i++)
-                    {
-                        if (e.Result[i].Total_Stock != Convert.ToDouble(e.Result[i].Count1))
-                        {
-                            SpacePartsList.SpacePart spacepart = new SpacePartsList.SpacePart()
-                            {
-                                ID_Item = e.Result[i].ID_Item,
-                                Name_Item = e.Result[i].Name_Item,
-                                Group_Item = e.Result[i].Group_Item,
-                                Sell_Price_Unit = e.Result[i].Sell_Price_Unit,
-                                Sell_Price_All = e.Result[i].Sell_Price_All,
-                                Cost_Price_Unit = e.Result[i].Cost_Price_Unit,
-                                Cost_Price_All = e.Result[i].Cost_Price_All,
-                                Self_Main = e.Result[i].Self_Main,
-                                Self_Try = e.Result[i].Self_Try,
-                                Date_Count_Stock = e.Result[i].Date_Count_Stock,
-                                Total_Stock = e.Result[i].Total_Stock,
-                                Amound_Sold = e.Result[i].Amound_Sold,
-                                Number_Parts_Booking = e.Result[i].Number_Parts_Booking,
-                                Inventory_Last_Month = e.Result[i].Inventory_Last_Month,
-                                Count1 = Convert.ToDouble(e.Result[i].Count1),
-                                Count2 = Convert.ToDouble(e.Result[i].Count2),
-                                Count3 = Convert.ToDouble(e.Result[i].Count3),
-                            };
-                            this._spacePartList.Add(spacepart);
-                        }
-                    }      
+                    msg = "Request was cancelled.";
+                    Android.Support.V7.App.AlertDialog.Builder alertDiag = new Android.Support.V7.App.AlertDialog.Builder(this);
+                    alertDiag.SetTitle("ไม่พบค้นหารายการสินค้า");
+                    alertDiag.SetMessage("กรุณากรอกรหัสชั้นวางสินค้าให้ถูกต้อง !!");
+
+                    Dialog diag = alertDiag.Create();
+                    diag.Show();
                 }
-                else if(round_count == 3)
+                else
                 {
-                    for (int i = 0; i < e.Result.Length; i++)
+                    this._spacePartList = new List<SpacePartsList.SpacePart>();
+
+                    int round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
+
+                    if (round_count == 1)
                     {
-                        if (e.Result[i].Total_Stock != Convert.ToDouble(e.Result[i].Count2))
+                        for (int i = 0; i < e.Result.Length; i++)
                         {
                             SpacePartsList.SpacePart spacepart = new SpacePartsList.SpacePart()
                             {
@@ -176,13 +119,78 @@ namespace CheckStockApp
                             this._spacePartList.Add(spacepart);
                         }
                     }
+                    else if (round_count == 2)
+                    {
+                        for (int i = 0; i < e.Result.Length; i++)
+                        {
+                            if (e.Result[i].Total_Stock != Convert.ToDouble(e.Result[i].Count1))
+                            {
+                                SpacePartsList.SpacePart spacepart = new SpacePartsList.SpacePart()
+                                {
+                                    ID_Item = e.Result[i].ID_Item,
+                                    Name_Item = e.Result[i].Name_Item,
+                                    Group_Item = e.Result[i].Group_Item,
+                                    Sell_Price_Unit = e.Result[i].Sell_Price_Unit,
+                                    Sell_Price_All = e.Result[i].Sell_Price_All,
+                                    Cost_Price_Unit = e.Result[i].Cost_Price_Unit,
+                                    Cost_Price_All = e.Result[i].Cost_Price_All,
+                                    Self_Main = e.Result[i].Self_Main,
+                                    Self_Try = e.Result[i].Self_Try,
+                                    Date_Count_Stock = e.Result[i].Date_Count_Stock,
+                                    Total_Stock = e.Result[i].Total_Stock,
+                                    Amound_Sold = e.Result[i].Amound_Sold,
+                                    Number_Parts_Booking = e.Result[i].Number_Parts_Booking,
+                                    Inventory_Last_Month = e.Result[i].Inventory_Last_Month,
+                                    Count1 = Convert.ToDouble(e.Result[i].Count1),
+                                    Count2 = Convert.ToDouble(e.Result[i].Count2),
+                                    Count3 = Convert.ToDouble(e.Result[i].Count3),
+                                };
+                                this._spacePartList.Add(spacepart);
+                            }
+                        }
+                    }
+                    else if (round_count == 3)
+                    {
+                        for (int i = 0; i < e.Result.Length; i++)
+                        {
+                            if (e.Result[i].Total_Stock != Convert.ToDouble(e.Result[i].Count2))
+                            {
+                                SpacePartsList.SpacePart spacepart = new SpacePartsList.SpacePart()
+                                {
+                                    ID_Item = e.Result[i].ID_Item,
+                                    Name_Item = e.Result[i].Name_Item,
+                                    Group_Item = e.Result[i].Group_Item,
+                                    Sell_Price_Unit = e.Result[i].Sell_Price_Unit,
+                                    Sell_Price_All = e.Result[i].Sell_Price_All,
+                                    Cost_Price_Unit = e.Result[i].Cost_Price_Unit,
+                                    Cost_Price_All = e.Result[i].Cost_Price_All,
+                                    Self_Main = e.Result[i].Self_Main,
+                                    Self_Try = e.Result[i].Self_Try,
+                                    Date_Count_Stock = e.Result[i].Date_Count_Stock,
+                                    Total_Stock = e.Result[i].Total_Stock,
+                                    Amound_Sold = e.Result[i].Amound_Sold,
+                                    Number_Parts_Booking = e.Result[i].Number_Parts_Booking,
+                                    Inventory_Last_Month = e.Result[i].Inventory_Last_Month,
+                                    Count1 = Convert.ToDouble(e.Result[i].Count1),
+                                    Count2 = Convert.ToDouble(e.Result[i].Count2),
+                                    Count3 = Convert.ToDouble(e.Result[i].Count3),
+                                };
+                                this._spacePartList.Add(spacepart);
+                            }
+                        }
+                    }
+                    msg = "complete";
                 }
-                msg = "complete";
-            }
-            var m_listSpaceLayout = new Intent(this, typeof(ListView_SpacePart_Activity));
-            m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(_spacePartList));
+                var m_listSpaceLayout = new Intent(this, typeof(ListView_SpacePart_Activity));
+                m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(_spacePartList));
 
-            this.StartActivity(m_listSpaceLayout);
+                this.StartActivity(m_listSpaceLayout);
+            }
+            catch(Exception ex)
+            {
+                string error = ex.Message;
+            }
+            
         }
 
         private void searchItem_Click(object sender,EventArgs e)

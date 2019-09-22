@@ -30,8 +30,12 @@ namespace CheckStockApp
 
         private void BackSearchBtn_Click(object sender, EventArgs e)
         {
-            var m_main = new Intent(this, typeof(Activity_NoItem));
+            var m_main = new Intent(this, typeof(MainActivity));
+            m_main.AddFlags(ActivityFlags.ClearTop);
+            m_main.AddFlags(ActivityFlags.ClearTask);
+            m_main.AddFlags(ActivityFlags.NewTask);
             this.StartActivity(m_main);
+            Finish();
         }
     }
 }
