@@ -3105,6 +3105,7 @@ containing a value of this type.
         public static int blocking=0x7f080057;
         public static int bottom=0x7f08003d;
         public static int branch_spinner=0x7f08009c;
+        public static int btnaddnewmech=0x7f0800db;
         public static int buttonPanel=0x7f080063;
         public static int cancel_action=0x7f0800cb;
         public static int cellitem_layout=0x7f0800a0;
@@ -3181,9 +3182,9 @@ containing a value of this type.
         public static int linearLayout2=0x7f080092;
         public static int listMode=0x7f08001d;
         public static int list_item=0x7f080061;
-        public static int masked=0x7f0800dd;
+        public static int masked=0x7f0800df;
         public static int media_actions=0x7f0800cd;
-        public static int message=0x7f0800db;
+        public static int message=0x7f0800dd;
         public static int middle=0x7f080031;
         public static int mini=0x7f080053;
         public static int multiply=0x7f080028;
@@ -3245,7 +3246,7 @@ containing a value of this type.
         public static int snackbar_action=0x7f0800c0;
         public static int snackbar_text=0x7f0800bf;
         public static int snap=0x7f080043;
-        public static int spacepart_listView=0x7f0800da;
+        public static int spacepart_listView=0x7f0800dc;
         public static int spacer=0x7f080064;
         public static int split_action_bar=0x7f080008;
         public static int src_atop=0x7f08002a;
@@ -3256,6 +3257,7 @@ containing a value of this type.
         public static int submenuarrow=0x7f080076;
         public static int submit_area=0x7f080087;
         public static int submit_button=0x7f0800b8;
+        public static int swipeRefreshLayout=0x7f0800da;
         public static int tabMode=0x7f08001f;
         public static int tag_transition_group=0x7f080019;
         public static int text=0x7f08001a;
@@ -3286,7 +3288,7 @@ containing a value of this type.
         public static int up=0x7f080009;
         public static int useLogo=0x7f080026;
         public static int view_offset_helper=0x7f080016;
-        public static int visible=0x7f0800dc;
+        public static int visible=0x7f0800de;
         public static int withText=0x7f08003c;
         public static int wrap_content=0x7f08002e;
     }

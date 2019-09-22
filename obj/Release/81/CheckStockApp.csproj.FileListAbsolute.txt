@@ -4,7 +4,6 @@ C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\bin\Release\CheckSto
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\bin\Release\CheckStockApp.CheckStockApp-Signed.apk
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Release\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Release\81\CheckStockApp.nuget.stamp
-C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Release\81\CheckStockApp.csprojAssemblyReference.cache
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Release\81\libraryimports.cache.stamp
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Release\81\res.flag
 C:\Users\SittikoRN\source\repos\CheckStockApp\CheckStockApp\obj\Release\81\CheckStockApp.csproj.CoreCompileInputs.cache

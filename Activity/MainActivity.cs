@@ -193,11 +193,14 @@ namespace CheckStockApp
             
         }
 
-        private void searchItem_Click(object sender,EventArgs e)
+        public void searchItem_Click(object sender,EventArgs e)
         {
+            ISharedPreferencesEditor editor = prefs.Edit();
+
             int round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
             string date_count = prefs.GetString("keyDate_Count", null);
             int brach_id = Convert.ToInt32(prefs.GetString("keyBrach_ID", null));
+
 
             selfMain = numSelf1.Text.ToString() + "-" + numSelf2.Text.ToString() + "-" + numSelf3.Text.ToString() + "-" + numSelf4.Text.ToString();
             _client.selectSpacePartAsync(selfMain, date_count, brach_id, round_count);
@@ -209,7 +212,11 @@ namespace CheckStockApp
 
             progress.SetCancelable(false);
             progress.Show();
+
+            editor.PutString("keySelf_Main", selfMain);
+            editor.Apply();
         }
+
 
         private void SearchItemOutShelf_Click(object sender, EventArgs e)
         {
@@ -244,6 +251,7 @@ namespace CheckStockApp
             numSelf4.Typeface = openSansRegular;
             searchItem.Typeface = openSansRegular;
             searchItemOutShelf.Typeface = openSansRegular;
+            changeRoundCount.Typeface = openSansRegular;
 
         }
 

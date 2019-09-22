@@ -2841,8 +2841,8 @@ namespace CheckStockApp
 			// aapt resource value: 0x7F0C006D
 			public const int snackbar_text = 2131492973;
 			
-			// aapt resource value: 0x7F010049
-			public const int spacepart_listView = 2130772041;
+			// aapt resource value: 0x7F010050
+			public const int spacepart_listView = 2130772048;
 			
 			// aapt resource value: 0x7F0C006E
 			public const int spacer = 2131492974;
@@ -2873,6 +2873,9 @@ namespace CheckStockApp
 			
 			// aapt resource value: 0x7F010047
 			public const int submit_button = 2130772039;
+			
+			// aapt resource value: 0x7F010049
+			public const int swipeRefreshLayout = 2130772041;
 			
 			// aapt resource value: 0x7F0C0077
 			public const int tabMode = 2131492983;

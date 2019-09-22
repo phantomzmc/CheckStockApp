@@ -2526,6 +2526,9 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f08009d
 			public const int branch_spinner = 2131230877;
 			
+			// aapt resource value: 0x7f0800db
+			public const int btnaddnewmech = 2131230939;
+			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
 			
@@ -2754,14 +2757,24 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0800de
 			public const int masked = 2131230942;
+=======
+			// aapt resource value: 0x7f0800df
+			public const int masked = 2131230943;
+>>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
 			
 			// aapt resource value: 0x7f0800cd
 			public const int media_actions = 2131230925;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0800dc
 			public const int message = 2131230940;
+=======
+			// aapt resource value: 0x7f0800dd
+			public const int message = 2131230941;
+>>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2946,8 +2959,13 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080043
 			public const int snap = 2131230787;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0800db
 			public const int spacepart_listView = 2131230939;
+=======
+			// aapt resource value: 0x7f0800dc
+			public const int spacepart_listView = 2131230940;
+>>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
 			
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
@@ -3072,8 +3090,13 @@ namespace CheckStockApp
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0800dd
 			public const int visible = 2131230941;
+=======
+			// aapt resource value: 0x7f0800de
+			public const int visible = 2131230942;
+>>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
