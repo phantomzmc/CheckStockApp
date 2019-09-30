@@ -140,7 +140,7 @@
 				android:id="@+id/linearLayout2">
 				<Button
 					android:text="เปลี่ยนรอบการนับ"
-					android:background="@color/colorOrange"
+					android:background="#FF5722"
 					android:textColor="#ffffff"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"

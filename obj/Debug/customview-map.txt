@@ -13,7 +13,6 @@ Button;obj/Debug/res/layout/activity_main.xml
 Button;obj/Debug/res/layout/activity_noitem.xml
 Button;obj/Debug/res/layout/activity_round_count.xml
 Button;obj/Debug/res/layout/custom_modal_item.xml
-color;obj/Debug/res/values/colors.xml
 color;obj/Debug/res/values/ic_launcher_background.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml

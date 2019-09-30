@@ -5,10 +5,10 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading;
-<<<<<<< HEAD
+
 using System.Threading.Tasks;
-=======
->>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
+
+
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -26,13 +26,13 @@ namespace CheckStockApp
     [Activity(Label = "รายการสินค้า")]
     public class ListView_SpacePart_Activity : AppCompatActivity
     {
-<<<<<<< HEAD
+
         SwipeRefreshLayout refreshLayout;
 
-=======
+
         private ServiceClient _client;
-        SwipeRefreshLayout refreshLayout;
->>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
+        public SwipeRefreshLayout refreshLayouts;
+
         ListView spaceListView;
         List<SpacePartsList.SpacePart> spacePartsList;
         SpacePartsItemAdapter adapters;
@@ -41,8 +41,16 @@ namespace CheckStockApp
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            var ObjectEvent = JsonConvert.DeserializeObject<List<SpacePartsList.SpacePart>>(Intent.GetStringExtra("Object_Event"));
-            spacePartsList = ObjectEvent;
+            try
+            {
+                var ObjectEvent = JsonConvert.DeserializeObject<List<SpacePartsList.SpacePart>>(Intent.GetStringExtra("Object_Event"));
+                spacePartsList = ObjectEvent;
+
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+            }
 
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.spacepart_listview);
@@ -57,14 +65,14 @@ namespace CheckStockApp
                     spaceListView.Adapter = adapters;
                     spaceListView.ItemClick += spacepartlist_ItemClick;
 
-                    refreshLayout = FindViewById<SwipeRefreshLayout>(Resource.Id.swipeRefreshLayout);
-                    refreshLayout.SetColorSchemeColors(Color.Red, Color.Green, Color.Blue, Color.Yellow);
-                    refreshLayout.Refresh += RefreshLayout_Refresh;
+                    refreshLayouts = FindViewById<SwipeRefreshLayout>(Resource.Id.swipeRefreshLayout);
+                    refreshLayouts.SetColorSchemeColors(Color.Red, Color.Green, Color.Blue, Color.Yellow);
+                    refreshLayouts.Refresh += RefreshLayout_Refresh;
 
-<<<<<<< HEAD
-=======
+
+
                     this.InitializeServiceClient();
->>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
+
                 }
                 else if (spacePartsList.Count == 0)
                 {
@@ -79,17 +87,12 @@ namespace CheckStockApp
 
             // Create your application here
         }
-
-<<<<<<< HEAD
-        private void RefreshLayout_Refresh(object sender, EventArgs e)
-        {
-=======
         private void InitializeServiceClient()
         {
             //สร้างการเชื่อมต่อระหว่าง Clicent กับ Webservice
             BasicHttpBinding binding = WCFHttpService.CreateBasicHttp();
             _client = WCFHttpService.GetService1Client();
-            _client.selectSpacePartCompleted += _client_selectSpacePartCompleted; ;
+            _client.selectSpacePartCompleted += _client_selectSpacePartCompleted;
         }
 
         private void _client_selectSpacePartCompleted(object sender, selectSpacePartCompletedEventArgs e)
@@ -227,26 +230,20 @@ namespace CheckStockApp
 
             _client.selectSpacePartAsync(selfMain, date_count, brach_id, round_count);
 
->>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
+
             //Data Refresh Place  
             BackgroundWorker work = new BackgroundWorker();
             work.DoWork += Work_DoWork;
             work.RunWorkerCompleted += Work_RunWorkerCompleted;
             work.RunWorkerAsync();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
         }
         private void Work_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            refreshLayout.Refreshing = false;
-<<<<<<< HEAD
+            refreshLayout.Refreshing = true;
+
         }
-=======
-        } 
->>>>>>> 21d48fdef191e1719b640d92a022d32f2c8cad1d
+
         private void Work_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(1000);

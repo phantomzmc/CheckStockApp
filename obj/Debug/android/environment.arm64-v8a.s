@@ -14,17 +14,15 @@ application_config:
 	.byte	0
 	/* uses_mono_aot */
 	.byte	0
-	/* uses_embedded_dsos */
-	.byte	0
 	/* uses_assembly_preload */
 	.byte	1
 	/* is_a_bundled_app */
 	.byte	0
 	/* environment_variable_count */
-	.zero	3
 	.word	10
 	/* system_property_count */
 	.word	0
+	.zero	4
 	/* android_package_name */
 	.xword	.L.str.1
 	.size	application_config, 24
@@ -65,7 +63,7 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"e676efc7-99f2-4595-b273-993152276d47"
+	.asciz	"4cd85e03-f127-4379-8a28-a29852634d2d"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object

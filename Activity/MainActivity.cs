@@ -181,10 +181,19 @@ namespace CheckStockApp
                     }
                     msg = "complete";
                 }
-                var m_listSpaceLayout = new Intent(this, typeof(ListView_SpacePart_Activity));
-                m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(_spacePartList));
+                try
+                {
+                    var m_listSpaceLayout = new Intent(this, typeof(ListView_SpacePart_Activity));
+                    m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(_spacePartList));
 
-                this.StartActivity(m_listSpaceLayout);
+                    this.StartActivity(m_listSpaceLayout);
+
+                }
+                catch(Exception ex)
+                {
+                    string error = ex.Message;
+                }
+
             }
             catch(Exception ex)
             {
