@@ -16,7 +16,8 @@ namespace AndroidForBC
 {
     public class WCFHttpService
     {
-        private static string _server = "http://192.168.1.195:8382/Service.svc";
+        //private static string _server = "http://192.168.1.195:8382/Service.svc";
+        private static string _server = "http://192.168.1.186:8151/Service.svc";
 
 
 

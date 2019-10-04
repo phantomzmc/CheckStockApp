@@ -34,7 +34,13 @@
 				android:background="#fff"
 				android:gravity="center_vertical">
 
-
+                <TextView
+						android:id="@+id/selfMainTextView"
+						android:text="ID_Item"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="20dp"
+						android:textColor="#000"/>
 				<TextView
 						android:id="@+id/idItemTextView"
 						android:text="ID_Item"

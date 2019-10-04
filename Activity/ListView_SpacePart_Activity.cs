@@ -28,7 +28,7 @@ namespace CheckStockApp
     {
 
         SwipeRefreshLayout refreshLayout;
-
+        Android.Support.V7.App.AlertDialog.Builder alertDiag;
 
         private ServiceClient _client;
         public SwipeRefreshLayout refreshLayouts;
@@ -37,10 +37,15 @@ namespace CheckStockApp
         List<SpacePartsList.SpacePart> spacePartsList;
         SpacePartsItemAdapter adapters;
 
+        public int round_count;
+        public int position;
+
         ISharedPreferences prefs = Application.Context.GetSharedPreferences("PREF_NAME", FileCreationMode.Private);
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
+
             try
             {
                 var ObjectEvent = JsonConvert.DeserializeObject<List<SpacePartsList.SpacePart>>(Intent.GetStringExtra("Object_Event"));
@@ -65,10 +70,8 @@ namespace CheckStockApp
                     spaceListView.Adapter = adapters;
                     spaceListView.ItemClick += spacepartlist_ItemClick;
 
-                    refreshLayouts = FindViewById<SwipeRefreshLayout>(Resource.Id.swipeRefreshLayout);
-                    refreshLayouts.SetColorSchemeColors(Color.Red, Color.Green, Color.Blue, Color.Yellow);
-                    refreshLayouts.Refresh += RefreshLayout_Refresh;
-
+                    //refreshLayouts = FindViewById<SwipeRefreshLayout>(Resource.Id.swipeRefreshLayout);
+                    //refreshLayouts.SetColorSchemeColors(Color.Red, Color.Green, Color.Blue, Color.Yellow);
 
 
                     this.InitializeServiceClient();
@@ -220,38 +223,90 @@ namespace CheckStockApp
         }
 
 
-        private void RefreshLayout_Refresh(object sender, EventArgs e)
-        {
+        //private void RefreshLayout_Refresh(object sender, EventArgs e)
+        //{
 
-            int round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
-            string date_count = prefs.GetString("keyDate_Count", null);
-            int brach_id = Convert.ToInt32(prefs.GetString("keyBrach_ID", null));
-            string selfMain = prefs.GetString("keySelf_Main", null);
+        //    int round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
+        //    string date_count = prefs.GetString("keyDate_Count", null);
+        //    int brach_id = Convert.ToInt32(prefs.GetString("keyBrach_ID", null));
+        //    string selfMain = prefs.GetString("keySelf_Main", null);
 
-            _client.selectSpacePartAsync(selfMain, date_count, brach_id, round_count);
+        //    _client.selectSpacePartAsync(selfMain, date_count, brach_id, round_count);
 
 
-            //Data Refresh Place  
-            BackgroundWorker work = new BackgroundWorker();
-            work.DoWork += Work_DoWork;
-            work.RunWorkerCompleted += Work_RunWorkerCompleted;
-            work.RunWorkerAsync();
+        //    //Data Refresh Place  
+        //    BackgroundWorker work = new BackgroundWorker();
+        //    work.DoWork += Work_DoWork;
+        //    work.RunWorkerCompleted += Work_RunWorkerCompleted;
+        //    work.RunWorkerAsync();
 
-        }
-        private void Work_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            refreshLayout.Refreshing = true;
+        //}
+        //private void Work_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        //{
+        //    refreshLayout.Refreshing = true;
 
-        }
+        //}
 
-        private void Work_DoWork(object sender, DoWorkEventArgs e)
-        {
-            Thread.Sleep(1000);
-        }
+        //private void Work_DoWork(object sender, DoWorkEventArgs e)
+        //{
+        //    Thread.Sleep(1000);
+        //}
 
         private void spacepartlist_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            int position = e.Position;
+            position = e.Position;
+
+            switch (round_count)
+            {
+                case 1:
+                    if (Convert.ToInt16(spacePartsList[position].Count1) != 0)
+                    {
+                        //นับแล้ว
+                        this.alertSuccessCount();
+                    }
+                    else if (Convert.ToInt16(spacePartsList[position].Count1) == 0)
+                    {
+                        //ยังไม่ได้นับ
+                        this.goDetailItem();
+                    }
+
+                    break;
+                case 2:
+                    if (Convert.ToInt16(spacePartsList[position].Count2) != 0)
+                    {
+                        //นับแล้ว
+                        this.alertSuccessCount();
+                    }
+                    else if (Convert.ToInt16(spacePartsList[position].Count2) == 0)
+                    {
+                        //ยังไม่ได้นับ
+                        this.goDetailItem();
+                    }
+
+                    break;
+                case 3:
+                    if (Convert.ToInt16(spacePartsList[position].Count3) != 0)
+                    {
+                        //นับแล้ว
+                        this.alertSuccessCount();
+                    }
+                    else if (Convert.ToInt16(spacePartsList[position].Count3) == 0)
+                    {
+                        //ยังไม่ได้นับ
+                        this.goDetailItem();
+                    }
+
+                    break;
+            }
+            
+        }
+        public void goDetailItem_Click(object sender, EventArgs e)
+        {
+            this.goDetailItem();
+        }
+
+        public void goDetailItem()
+        {
             //var m_listSpaceLayout = new Intent(this, typeof(Custom_Modal_Item));
             //m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(spacePartsList));
             //m_listSpaceLayout.PutExtra("Index", position.ToString());
@@ -262,6 +317,23 @@ namespace CheckStockApp
             transaction.AddToBackStack(null);
             transaction.Commit();
             //this.Remoteitem(position);
+        }
+        public void alertSuccessCount()
+        {
+            #region alert
+            alertDiag = new Android.Support.V7.App.AlertDialog.Builder(this);
+            alertDiag.SetTitle("ได้มีการนับรายการนี้แล้ว");
+            alertDiag.SetMessage("ต้องการแก้ไขรายการนี้หรือไม่ !");
+            alertDiag.SetPositiveButton("แก้ไข", goDetailItem_Click);
+            alertDiag.SetNegativeButton("ยกเลิก", dismissAlert);
+
+            Dialog diag = alertDiag.Create();
+            diag.Show();
+            #endregion
+        }
+        private void dismissAlert(object sender, EventArgs e)
+        {
+            alertDiag.Dispose();
         }
 
         public void Remoteitem(List<SpacePartsList.SpacePart> spacePartsList,int position)

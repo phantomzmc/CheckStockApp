@@ -21,8 +21,7 @@ namespace CheckStockApp
         TextView titleTextView;
         EditText numSelf1;
         EditText numSelf2;
-        EditText numSelf3;
-        EditText numSelf4;
+
         Button searchItem;
         Button searchItemOutShelf;
         Button changeRoundCount;
@@ -39,8 +38,6 @@ namespace CheckStockApp
             titleTextView = FindViewById<TextView>(Resource.Id.titleApp_textView);
             numSelf1 = FindViewById<EditText>(Resource.Id.numself1_textInput);
             numSelf2 = FindViewById<EditText>(Resource.Id.numself2_textInput);
-            numSelf3 = FindViewById<EditText>(Resource.Id.numself3_textInput);
-            numSelf4 = FindViewById<EditText>(Resource.Id.numself4_textInput);
             searchItem = FindViewById<Button>(Resource.Id.searchItem_btn);
             searchItemOutShelf = FindViewById<Button>(Resource.Id.searchItemOutShelf_btn);
             changeRoundCount = FindViewById<Button>(Resource.Id.changeRoundCount__btn);
@@ -211,7 +208,7 @@ namespace CheckStockApp
             int brach_id = Convert.ToInt32(prefs.GetString("keyBrach_ID", null));
 
 
-            selfMain = numSelf1.Text.ToString() + "-" + numSelf2.Text.ToString() + "-" + numSelf3.Text.ToString() + "-" + numSelf4.Text.ToString();
+            selfMain = numSelf1.Text.ToString() + "-" + numSelf2.Text.ToString();
             _client.selectSpacePartAsync(selfMain, date_count, brach_id, round_count);
             //this.InitializeServiceClient;
             progress = new ProgressDialog(this);
@@ -256,8 +253,6 @@ namespace CheckStockApp
             titleTextView.Typeface = openSansRegular;
             numSelf1.Typeface = openSansRegular;
             numSelf2.Typeface = openSansRegular;
-            numSelf3.Typeface = openSansRegular;
-            numSelf4.Typeface = openSansRegular;
             searchItem.Typeface = openSansRegular;
             searchItemOutShelf.Typeface = openSansRegular;
             changeRoundCount.Typeface = openSansRegular;

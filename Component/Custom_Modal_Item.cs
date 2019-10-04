@@ -124,6 +124,7 @@ namespace CheckStockApp
         }
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
+            #region alert
             alertDiag = new Android.Support.V7.App.AlertDialog.Builder(Activity);
             alertDiag.SetTitle("ยืนยันการกรอกข้อมูล");
             alertDiag.SetMessage("กรุณาตรวจสอบการกรอกข้อมูลที่ถูกต้อง !");
@@ -132,7 +133,10 @@ namespace CheckStockApp
 
             Dialog diag = alertDiag.Create();
             diag.Show();
+            #endregion
+
         }
+
 
         private void dismissAlert(object sender, EventArgs e)
         {

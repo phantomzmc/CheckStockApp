@@ -44,7 +44,7 @@
 				android:gravity="center"
 				android:id="@+id/linearLayout1">
 				<android.support.design.widget.TextInputEditText
-					android:layout_width="50dp"
+					android:layout_width="75dp"
 					android:layout_height="50dp"
 					android:id="@+id/numself1_textInput"
 					android:hint="A"
@@ -60,42 +60,10 @@
 					android:layout_height="20dp"
 					android:id="@+id/textView1" />
 				<android.support.design.widget.TextInputEditText
-					android:layout_width="50dp"
+					android:layout_width="75dp"
 					android:layout_height="50dp"
 					android:id="@+id/numself2_textInput"
 					android:hint="00"
-					android:layout_marginLeft="0dp"
-					android:layout_marginRight="10dp"
-					android:layout_marginTop="5dp"
-					android:layout_marginBottom="5dp"
-					android:textColor="#000"
-					android:inputType="text"/>
-				<TextView
-					android:text="-"
-					android:layout_width="20dp"
-					android:layout_height="20dp"
-					android:id="@+id/textView1" />
-				<android.support.design.widget.TextInputEditText
-					android:layout_width="50dp"
-					android:layout_height="50dp"
-					android:id="@+id/numself3_textInput"
-					android:hint="00"
-					android:layout_marginLeft="0dp"
-					android:layout_marginRight="10dp"
-					android:layout_marginTop="5dp"
-					android:layout_marginBottom="5dp"
-					android:textColor="#000"
-					android:inputType="text"/>
-				<TextView
-					android:text="-"
-					android:layout_width="20dp"
-					android:layout_height="20dp"
-					android:id="@+id/textView1" />
-				<android.support.design.widget.TextInputEditText
-					android:layout_width="50dp"
-					android:layout_height="50dp"
-					android:id="@+id/numself4_textInput"
-					android:hint="A"
 					android:layout_marginLeft="0dp"
 					android:layout_marginRight="10dp"
 					android:layout_marginTop="5dp"

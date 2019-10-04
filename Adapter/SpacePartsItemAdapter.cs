@@ -48,6 +48,7 @@ namespace CheckStockApp
                 //replace with your item and your holder items
                 //comment back in
                 view = inflater.Inflate(Resource.Layout.cell_spacepart_item, parent, false);
+                var self_main = view.FindViewById<TextView>(Resource.Id.selfMainTextView);
                 var id_item = view.FindViewById<TextView>(Resource.Id.idItemTextView);
                 var name_item = view.FindViewById<TextView>(Resource.Id.name_textView);
                 var group_item = view.FindViewById<TextView>(Resource.Id.groupItem_textView);
@@ -57,6 +58,7 @@ namespace CheckStockApp
                 var f_totalstock_item = view.FindViewById<TextView>(Resource.Id.f_totalstock_textView);
                 var f_costunit_item = view.FindViewById<TextView>(Resource.Id.f_costunit_textView);
 
+                self_main.Typeface = openSansRegular;
                 id_item.Typeface = openSansRegular;
                 name_item.Typeface = openSansRegular;
                 group_item.Typeface = openSansRegular;
@@ -66,13 +68,14 @@ namespace CheckStockApp
                 f_totalstock_item.Typeface = openSansRegular;
                 f_costunit_item.Typeface = openSansRegular;
 
-                view.Tag = new ViewHolder() { IDItem_TextView = id_item, NameItem_TextView = name_item, GroupItem_TextView = group_item, TotalStock_TextView = totalstock_item, CostPriceUnit_TextView = costunit_item};
+                view.Tag = new ViewHolder() { SelfMain_TextView = self_main ,IDItem_TextView = id_item, NameItem_TextView = name_item, GroupItem_TextView = group_item, TotalStock_TextView = totalstock_item, CostPriceUnit_TextView = costunit_item};
 
             }
 
             var holder = (ViewHolder)view.Tag;
 
             //fill in your items
+            holder.SelfMain_TextView.Text = "ชั้นวาง : " + spacePartList[position].Self_Main.ToString();
             holder.IDItem_TextView.Text = "รหัสสินค้า : " + spacePartList[position].ID_Item.ToString();
             holder.NameItem_TextView.Text = "ชื่อสินค้า : " + spacePartList[position].Name_Item.ToString();
             holder.GroupItem_TextView.Text = spacePartList[position].Group_Item.ToString();
@@ -95,6 +98,7 @@ namespace CheckStockApp
     class ViewHolder : Java.Lang.Object
     {
         //Your adapter views to re-use
+        public TextView SelfMain_TextView { get; set; }
         public TextView IDItem_TextView { get; set; }
         public TextView NameItem_TextView { get; set; }
         public TextView GroupItem_TextView { get; set; }
