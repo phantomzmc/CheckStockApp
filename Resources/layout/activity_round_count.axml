@@ -34,28 +34,33 @@
 					android:id="@+id/f_titleApp_textView" />
 			</LinearLayout>
 			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
 				android:orientation="horizontal"
-				android:layout_gravity="center"
-				android:gravity="center"
-				android:id="@+id/linearLayout1">
-				<android.support.design.widget.TextInputEditText
-					android:layout_width="300dp"
-					android:layout_height="50dp"
-					android:id="@+id/roundcount_textInput"
-					android:hint="รอบการนับ"
-					android:layout_marginLeft="10dp"
-					android:layout_marginRight="10dp"
-					android:layout_marginTop="5dp"
-					android:layout_marginBottom="5dp"
+				android:padding="10dp"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp">
+                    <TextView
+					android:id="@+id/f_roundcount_spinner"
+					android:text="รอบนับสต็อค :"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp"
 					android:textColor="#000"
-					android:inputType="number"/>
+					android:textSize="16dp"/>
+				<Spinner
+					android:id="@+id/roundcount_spinner"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="20dp"
+				/>
 
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
-				android:padding="10dip"
+				android:padding="10dp"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="20dp"

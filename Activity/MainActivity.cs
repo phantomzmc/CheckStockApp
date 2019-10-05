@@ -243,9 +243,13 @@ namespace CheckStockApp
 
         private void ChangeRoundCount_Click(object sender, EventArgs e)
         {
-            this.OnBackPressed();
-            //var m_roundCount = new Intent(this, typeof(RoundCount_Activity));
-            //this.StartActivity(m_roundCount);
+            //this.OnBackPressed();
+            var m_roundCount = new Intent(this, typeof(RoundCount_Activity));
+            m_roundCount.AddFlags(ActivityFlags.ClearTop);
+            m_roundCount.AddFlags(ActivityFlags.ClearTask);
+            m_roundCount.AddFlags(ActivityFlags.NewTask);
+            this.StartActivity(m_roundCount);
+            Finish();
         }
         private void setText()
         {

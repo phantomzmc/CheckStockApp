@@ -180,15 +180,16 @@
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/view/ViewPager_OnAdapterChangeListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/content/Loader_OnLoadCanceledListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/content/Loader_OnLoadCompleteListenerImplementor.java
+/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/mediacompat/R.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/widget/NestedScrollView_OnScrollChangeListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/widget/SwipeRefreshLayout_OnRefreshListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/widget/SlidingPaneLayout_PanelSlideListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/widget/DrawerLayout_DrawerListenerImplementor.java
+/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/compat/R.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/app/SharedElementCallback_OnSharedElementsReadyListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v4/app/FragmentManager_OnBackStackChangedListenerImplementor.java
-/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/mediacompat/R.java
-/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/compat/R.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/cardview/R.java
+/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/appcompat/R.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/widget/RecyclerView_OnItemTouchListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/widget/SearchView_OnCloseListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/widget/ContentFrameLayout_OnAttachListenerImplementor.java
@@ -205,11 +206,10 @@
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/widget/PopupMenu_OnMenuItemClickListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/widget/MenuItemHoverListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/widget/ShareActionProvider_OnShareTargetSelectedListenerImplementor.java
-/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/appcompat/R.java
+/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/recyclerview/R.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/app/ActionBar_TabListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/app/ActionBar_OnMenuVisibilityListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/v7/app/ActionBar_OnNavigationListenerImplementor.java
-/Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/recyclerview/R.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/widget/Toolbar_NavigationOnClickEventDispatcher.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/mono/android/support/transition/Transition_TransitionListenerImplementor.java
 /Users/thunnathorn/CheckStockApp/obj/Debug/android/src/android/support/v7/app/AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor.java
@@ -248,4 +248,3 @@
 /Users/thunnathorn/CheckStockApp/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/thunnathorn/CheckStockApp/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/thunnathorn/CheckStockApp/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
-/Users/thunnathorn/CheckStockApp/obj/Debug/CheckStockApp.csprojAssemblyReference.cache

@@ -1,38 +1,40 @@
 ﻿<Properties StartupConfiguration="{97B74187-4AB5-4A1E-9111-F12A6EF57865}|Default">
-  <MonoDevelop.Ide.ItemProperties.CheckStockApp AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Baytrail89A0F609" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WCFHttpService.cs">
+  <MonoDevelop.Ide.ItemProperties.CheckStockApp AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Activity/RoundCount_Activity.cs">
     <Files>
-      <File FileName="Resources/layout/activity_round_count.axml" Line="1" Column="1" />
-      <File FileName="Adapter/SpacePartsItemAdapter.cs" Line="78" Column="105" />
-      <File FileName="Activity/ListView_SpacePart_Activity.cs" Line="260" Column="14" />
-      <File FileName="Activity/MainActivity.cs" Line="261" Column="1" />
-      <File FileName="Activity/RoundCount_Activity.cs" />
-      <File FileName="Activity/Activity_NoItem.cs" />
+      <File FileName="Adapter/SpacePartsItemAdapter.cs" Line="102" Column="83" />
+      <File FileName="Activity/ListView_SpacePart_Activity.cs" Line="191" Column="92" />
+      <File FileName="Activity/MainActivity.cs" Line="251" Column="46" />
+      <File FileName="Activity/RoundCount_Activity.cs" Line="20" Column="33" />
       <File FileName="Class/SpaceParts.cs" />
       <File FileName="Resources/layout/activity_noitem.axml" />
       <File FileName="Resources/layout/custom_modal_item.axml" />
       <File FileName="Resources/values/colors.xml" />
       <File FileName="Resources/values/styles.xml" />
       <File FileName="Resources/layout/spacepart_listview.axml" />
-      <File FileName="Component/Custom_Modal_Item.cs" Line="139" Column="1" />
-      <File FileName="Resources/layout/activity_main.axml" Line="57" Column="14" />
-      <File FileName="Resources/layout/cell_spacepart_item.axml" Line="38" Column="40" />
-      <File FileName="WCFHttpService.cs" Line="21" Column="1" />
+      <File FileName="Component/Custom_Modal_Item.cs" />
+      <File FileName="Resources/layout/activity_main.axml" />
+      <File FileName="WCFHttpService.cs" Line="26" Column="1" />
+      <File FileName="Resources/layout/activity_round_count.axml" Line="1" Column="1" />
+      <File FileName="Resources/layout/cell_spacepart_item.axml" Line="56" Column="38" />
+      <File FileName="Properties/AndroidManifest.xml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CheckStockApp" expanded="True">
             <Node name="CheckStockApp" expanded="True">
-              <Node name="Activity" expanded="True" />
+              <Node name="Activity" expanded="True">
+                <Node name="RoundCount_Activity.cs" selected="True" />
+              </Node>
               <Node name="Adapter" expanded="True" />
               <Node name="Class" expanded="True" />
               <Node name="Component" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
-              <Node name="WCFHttpService.cs" selected="True" />
             </Node>
           </Node>
         </State>

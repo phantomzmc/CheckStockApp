@@ -9,4 +9,10 @@
     <item>สันป่าตอง</item>
     <item>จอมทอง</item>
   </string-array>
+  <string-array name="roundcount_array">
+    <item>--เลือกรอบที่นับ--</item>
+    <item>รอบที่ 1</item>
+    <item>รอบที่ 2</item>
+    <item>รอบที่ 3</item>
+  </string-array>
 </resources>

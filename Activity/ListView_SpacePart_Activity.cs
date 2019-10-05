@@ -65,7 +65,7 @@ namespace CheckStockApp
 
                 if (spacePartsList.Count != 0)
                 {
-                    adapters = new SpacePartsItemAdapter(this, spacePartsList);
+                    adapters = new SpacePartsItemAdapter(this, spacePartsList,round_count);
                     spaceListView = FindViewById<ListView>(Resource.Id.spacepart_listView);
                     spaceListView.Adapter = adapters;
                     spaceListView.ItemClick += spacepartlist_ItemClick;
@@ -340,7 +340,7 @@ namespace CheckStockApp
         {
             spacePartsList.RemoveAt(position);
 
-            adapters = new SpacePartsItemAdapter(this, spacePartsList);
+            adapters = new SpacePartsItemAdapter(this, spacePartsList,round_count);
             adapters.NotifyDataSetChanged();
 
             
