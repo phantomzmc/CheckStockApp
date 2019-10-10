@@ -1,38 +1,40 @@
 ﻿<Properties StartupConfiguration="{97B74187-4AB5-4A1E-9111-F12A6EF57865}|Default">
   <MonoDevelop.Ide.ItemProperties.CheckStockApp AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Activity/RoundCount_Activity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Resources/layout/activity_round_count.axml">
     <Files>
       <File FileName="Adapter/SpacePartsItemAdapter.cs" Line="102" Column="83" />
-      <File FileName="Activity/ListView_SpacePart_Activity.cs" Line="191" Column="92" />
-      <File FileName="Activity/MainActivity.cs" Line="251" Column="46" />
-      <File FileName="Activity/RoundCount_Activity.cs" Line="20" Column="33" />
+      <File FileName="Activity/ListView_SpacePart_Activity.cs" Line="40" Column="32" />
+      <File FileName="Activity/MainActivity.cs" />
+      <File FileName="Activity/RoundCount_Activity.cs" Line="12" Column="35" />
       <File FileName="Class/SpaceParts.cs" />
       <File FileName="Resources/layout/activity_noitem.axml" />
       <File FileName="Resources/layout/custom_modal_item.axml" />
       <File FileName="Resources/values/colors.xml" />
       <File FileName="Resources/values/styles.xml" />
-      <File FileName="Resources/layout/spacepart_listview.axml" />
-      <File FileName="Component/Custom_Modal_Item.cs" />
-      <File FileName="Resources/layout/activity_main.axml" />
-      <File FileName="WCFHttpService.cs" Line="26" Column="1" />
-      <File FileName="Resources/layout/activity_round_count.axml" Line="1" Column="1" />
-      <File FileName="Resources/layout/cell_spacepart_item.axml" Line="56" Column="38" />
-      <File FileName="Properties/AndroidManifest.xml" />
+      <File FileName="Component/Custom_Modal_Item.cs" Line="155" Column="80" />
+      <File FileName="WCFHttpService.cs" />
+      <File FileName="Resources/layout/cell_spacepart_item.axml" />
+      <File FileName="Activity/Login_Activity.cs" Line="46" Column="46" />
+      <File FileName="Resources/layout/activity_main.axml" Line="1" Column="1" />
+      <File FileName="Resources/layout/spacepart_listview.axml" Line="11" Column="41" />
+      <File FileName="Resources/layout/activity_login.xml" Line="1" Column="1" />
+      <File FileName="Resources/layout/activity_round_count.axml" Line="19" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CheckStockApp" expanded="True">
             <Node name="CheckStockApp" expanded="True">
-              <Node name="Activity" expanded="True">
-                <Node name="RoundCount_Activity.cs" selected="True" />
-              </Node>
+              <Node name="Activity" expanded="True" />
               <Node name="Adapter" expanded="True" />
               <Node name="Class" expanded="True" />
               <Node name="Component" expanded="True" />
+              <Node name="Fragment" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="activity_round_count.axml" selected="True" />
+                </Node>
                 <Node name="values" expanded="True" />
               </Node>
             </Node>

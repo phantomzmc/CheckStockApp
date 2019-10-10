@@ -46,6 +46,7 @@ namespace CheckStockApp
         public string date_count;
         public int brach_id;
         public int _status = 0;
+        public string username;
         ISharedPreferences prefs = Application.Context.GetSharedPreferences("PREF_NAME", FileCreationMode.Private);
 
         public Custom_Modal_Item(List<SpacePartsList.SpacePart> _spaceParts,int _position)
@@ -146,15 +147,28 @@ namespace CheckStockApp
         {
             //ListView_SpacePart_Activity listView_SpacePart_Activity = new ListView_SpacePart_Activity();
             alertDiag.Dispose();
-            this.updateStock();
-            this.checkUpdate();
+            if(InputCountEditText.Text == "")
+            {
+                #region alert
+                alertDiag = new Android.Support.V7.App.AlertDialog.Builder(Activity);
+                alertDiag.SetTitle("ผู้ใช้งานยังไม่ได้กรอกข้อมูล");
+                alertDiag.SetMessage("กรุณาตรวจสอบการกรอกข้อมูลที่ถูกต้อง !"); 
 
-            //listView_SpacePart_Activity.Remoteitem(spaceParts , position);
-            spaceParts.RemoveAt(position);
-            var m_listSpaceLayout = new Intent(Activity, typeof(ListView_SpacePart_Activity));
-            m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(spaceParts));
-            this.StartActivity(m_listSpaceLayout);
+                Dialog diag = alertDiag.Create();
+                diag.Show();
+                #endregion
+            }
+            else
+            {
+                this.updateStock();
+                this.checkUpdate();
 
+                //listView_SpacePart_Activity.Remoteitem(spaceParts , position);
+                spaceParts.RemoveAt(position);
+                var m_listSpaceLayout = new Intent(Activity, typeof(ListView_SpacePart_Activity));
+                m_listSpaceLayout.PutExtra("Object_Event", JsonConvert.SerializeObject(spaceParts));
+                this.StartActivity(m_listSpaceLayout);
+            }
         }
         public async void checkUpdate()
         {
@@ -169,6 +183,7 @@ namespace CheckStockApp
             string date_count_stock = date_count;
             int count_value = Convert.ToInt32(InputCountEditText.Text);
             _client.updateDetail_CountStockAsync(iditem,round,brach,date_count_stock,count_value);
+            //_client.updateDetail_CountStockAsync(iditem, round, brach, date_count_stock, count_value,username);
             _client.selectSpacePartAsync(spaceParts[position].Self_Main.ToString(), date_count, brach, round);
         }
 
@@ -212,6 +227,7 @@ namespace CheckStockApp
             round_count = Convert.ToInt32(prefs.GetString("keyRound_Count", null));
             date_count = prefs.GetString("keyDate_Count", null);
             brach_id = Convert.ToInt32(prefs.GetString("keyBrach_ID", null));
+            username = prefs.GetString("keyUsername", null);
         }
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {

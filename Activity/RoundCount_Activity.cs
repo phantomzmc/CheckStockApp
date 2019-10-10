@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace CheckStockApp
 {
-    [Activity(Label = "CheckStock", MainLauncher = true)]
+    [Activity(Label = "CheckStock")]
 
     public class RoundCount_Activity : AppCompatActivity
     {
